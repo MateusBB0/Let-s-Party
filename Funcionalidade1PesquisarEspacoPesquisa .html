@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Funcionalidade1PesquisarEspacoPesquisa </title>
+	<style>
+		body {
+			font-family: system-ui;
+		}
+		.absolute-view {
+			position: absolute;
+			bottom: -2px;
+			right: 0px;
+			left: 0px;
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.absolute-view2 {
+			position: absolute;
+			top: 0px;
+			bottom: 0;
+			right: -102px;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 4px;
+			border: 1px solid #E4E4E7;
+			padding: 3px 8px;
+		}
+		.button {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #18181B;
+			border-radius: 37282700px;
+			border: none;
+			padding: 12px 7px;
+			margin-left: 15px;
+			text-align: left;
+		}
+		.button-row-view {
+			align-self: stretch;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #18181B;
+			border-radius: 12px;
+			border: none;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-bottom: 8px;
+			margin-left: 20px;
+			margin-right: 20px;
+			gap: 10px;
+			box-shadow: 0px 1px 2px #0000001A;
+			text-align: left;
+		}
+		.column {
+			align-self: stretch;
+			position: relative;
+		}
+		.column2 {
+			align-self: stretch;
+			align-items: flex-start;
+			background: #FFFFFF;
+			padding-bottom: 666px;
+		}
+		.column3 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+			border-radius: 12px;
+			border: 1px solid #E4E4E7;
+			padding-top: 17px;
+			padding-bottom: 17px;
+			padding-left: 17px;
+			gap: 4px;
+		}
+		.column4 {
+			width: 597px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			background: #FAFAFA;
+			border-radius: 16px;
+			border: 1px solid #E4E4E7;
+			padding-top: 1px;
+			padding-left: 1px;
+			padding-right: 1px;
+			margin-left: 111px;
+			box-shadow: 0px 1px 2px #0000001A;
+		}
+		.column5 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.column6 {
+			align-self: stretch;
+			padding: 20px;
+		}
+		.column7 {
+			width: 179px;
+			box-sizing: border-box;
+			background: #FFFFFF;
+			border-radius: 8px;
+			border: 1px solid #E4E4E7;
+			padding: 9px;
+		}
+		.column8 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 12px;
+			gap: 4px;
+		}
+		.column9 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+		}
+		.contain {
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+		}
+		.image {
+			border-radius: 70px;
+			width: 101px;
+			height: 56px;
+			object-fit: fill;
+		}
+		.image2 {
+			width: 40px;
+			height: 56px;
+			object-fit: fill;
+		}
+		.image3 {
+			border-radius: 10px;
+			width: 30px;
+			height: 30px;
+			margin-right: 4px;
+			object-fit: fill;
+		}
+		.image4 {
+			width: 595px;
+			height: 176px;
+			object-fit: fill;
+		}
+		.image5 {
+			border-radius: 12px;
+			width: 16px;
+			height: 16px;
+			object-fit: fill;
+		}
+		.input {
+			color: #18181B;
+			font-size: 12px;
+			align-self: stretch;
+			background: #FAFAFA;
+			border-radius: 8px;
+			border: 1px solid #D4D4D8;
+			padding: 10px 33px;
+		}
+		.row-view {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: #FFFFFF;
+			padding-bottom: 1px;
+			padding-left: 16px;
+			padding-right: 16px;
+			margin-bottom: 80px;
+			box-shadow: 0px 1px 2px #0000001A;
+		}
+		.row-view2 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			padding-left: 9px;
+			padding-right: 9px;
+			gap: 15px;
+		}
+		.row-view3 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			border-radius: 10px;
+			border: 1px solid #E4E4E7;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		.row-view4 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.row-view5 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			padding-top: 12px;
+			gap: 9px;
+		}
+		.row-view6 {
+			width: 422px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.text {
+			color: #000000;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text2 {
+			color: #18181B;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.text3 {
+			color: #FFFFFF;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text4 {
+			color: #3F3F47;
+			font-size: 12px;
+		}
+		.text5 {
+			color: #18181B;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text6 {
+			color: #71717B;
+			font-size: 11px;
+		}
+		.text7 {
+			color: #18181B;
+			font-size: 11px;
+			font-weight: bold;
+		}
+		.text8 {
+			color: #3F3F47;
+			font-size: 10px;
+		}
+		.view {
+			overflow: hidden;
+			align-self: stretch;
+			background: #FFFFFF;
+		}
+		.view2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 14px;
+			padding-right: 14px;
+		}
+		.view3 {
+			align-self: stretch;
+			background: #FAFAFA;
+			border-radius: 16px;
+			border: 1px solid #E4E4E7;
+			padding: 37px 21px 21px 21px;
+			margin-bottom: 68px;
+			margin-left: 111px;
+			margin-right: 111px;
+			box-shadow: 0px 1px 2px #0000001A;
+		}
+		.view4 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.view5 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.view6 {
+			width: 206px;
+		}
+		.view7 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 4px;
+			border: 1px solid #E4E4E7;
+			padding: 3px 9px;
+		}
+		.view8 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+		.view9 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 4px;
+			border: 1px solid #E4E4E7;
+			padding: 3px 8px;
+		}
+		.view10 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 4px;
+			border: 1px solid #E4E4E7;
+			padding: 3px 8px;
+		}
+	</style>
+</head>
+<body>
+		<div class="contain">
+		<div class="view">
+			<div class="column">
+				<div class="absolute-view">
+					<span class="text" >
+						© 2026 Let’s Party. Todos os direitos reservados.
+					</span>
+				</div>
+				<div class="column2">
+					<div class="row-view">
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/ytd4hsyr_expires_30_days.png" 
+							class="image"
+						/>
+						<div class="view2">
+							<span class="text2" >
+								Let’s Party
+							</span>
+						</div>
+						<div class="row-view2">
+							<img
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/vd9cls0n_expires_30_days.png" 
+								class="image2"
+							/>
+							<div class="row-view3">
+								<button class="button"
+									onclick="alert('Pressed!')"}>
+									<span class="text3" >
+										User
+									</span>
+								</button>
+								<img
+									src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/2n0s4z9k_expires_30_days.png" 
+									class="image3"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="view3">
+						<div class="column3">
+							<div class="view4">
+								<span class="text4" >
+									Buscar por Bairro ou Nome:
+								</span>
+							</div>
+							<input
+								type="text"
+								placeholder="Espaço Jardim da Barra"
+								class="input"
+							/>
+						</div>
+					</div>
+					<div class="column4">
+						<div class="column5">
+							<img
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/cd9emgvz_expires_30_days.png" 
+								class="image4"
+							/>
+							<div class="column6">
+								<div class="row-view4">
+									<span class="text5" >
+										Espaço Jardim da Barra
+									</span>
+									<span class="text2" >
+										R$ 2.500
+									</span>
+								</div>
+								<div class="row-view5">
+									<div class="column7">
+										<div class="view5">
+											<span class="text6" >
+												Capacidade
+											</span>
+										</div>
+										<div class="view5">
+											<span class="text7" >
+												100 p.
+											</span>
+										</div>
+									</div>
+									<div class="column7">
+										<div class="view5">
+											<span class="text6" >
+												Mesas Máx
+											</span>
+										</div>
+										<div class="view5">
+											<span class="text7" >
+												15 mes.
+											</span>
+										</div>
+									</div>
+									<div class="column7">
+										<div class="view5">
+											<span class="text6" >
+												Cadeiras Máx
+											</span>
+										</div>
+										<div class="view5">
+											<span class="text7" >
+												80 cad.
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="column8">
+									<div class="row-view6">
+										<div class="view6">
+											<div class="column5">
+												<div class="view7">
+													<span class="text8" >
+														✓ Piscina
+													</span>
+												</div>
+												<div class="view8">
+													<div class="column9">
+														<div class="view9">
+															<span class="text8" >
+																✓ Churrasqueira Goumert
+															</span>
+														</div>
+														<div class="absolute-view2">
+															<span class="text8" >
+																✓ Ar Condicionado
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="view10">
+											<span class="text8" >
+												✓ Cozinha Industrial
+											</span>
+										</div>
+									</div>
+									<div class="view7">
+										<span class="text8" >
+											✓ Estacionamento (15 vagas)
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="button-row-view"
+							onclick="alert('Pressed!')"}>
+							<span class="text3" >
+								Selecionar este local e criar Festa
+							</span>
+							<img
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/n5x35tsh_expires_30_days.png" 
+								class="image5"
+							/>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
