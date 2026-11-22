@@ -1,0 +1,240 @@
+/* BODY E MAIN */
+		body {
+			font-family: system-ui;
+		}
+		#main_principal{
+					align-self: stretch;
+					align-items: flex-start;
+					margin-bottom: 201px;
+					margin-left: 111px;
+					margin-right: 111px;
+					position: relative;
+		}
+
+		/* HEADER */
+		.organizar_navbar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0px 16px 1px 16px;
+			margin-bottom: 32px;
+			box-shadow: 0px 1px 2px #0000001A;
+		}
+		.logo {
+			border-radius: 70px;
+			width: 100px;
+			height: 56px;
+		}
+		.img_config {
+			width: 40px;
+			height: auto;
+			color: #000000;
+		}
+
+		/* CAMINHO */
+
+		.container_caminho {
+			display: flex;
+			align-items: center;
+			border-radius: 12px;
+			border: 1px solid #E4E4E7;
+			padding: 13px 6px;
+			gap: 8px;
+		}
+
+		/* Na home page, é o card "Local" */
+		.caminho_ativo {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #18181B;
+			border-radius: 8px;
+			border: 1px solid #18181B;
+			padding: 8px 14px;
+			box-shadow: 0px 1px 3px #0000001A;
+			text-align: left;
+		}
+		/* Na home page, são os cards "configurar festa", "resumo", "confirmação" */
+		.caminho_inativo {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 8px;
+			border: 1px solid #E4E4E7;
+			padding: 8px 14px;
+			text-align: left;
+		}
+		.seta_img{
+			width: 30px;
+		}
+
+		.selecionar_evento {
+			text-decoration: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #18181B;
+			border-radius: 12px;
+			border: none;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-bottom: 20px;
+			margin-left: 20px;
+			margin-right: 20px;
+			gap: 10px;
+			box-shadow: 0px 1px 2px #0000001A;
+			text-align: left;
+		}
+
+		/* BUSCA */
+		.container_busca {
+			background: #FAFAFA;
+			border-radius: 16px;
+			border: 1px solid #E4E4E7;
+			padding: 37px 21px 21px 21px;
+			margin-bottom: 75px;
+			box-shadow: 0px 1px 2px #0000001A;
+		}
+		.box_busca {
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+			border-radius: 12px;
+			border: 1px solid #E4E4E7;
+			padding-top: 17px;
+			padding-bottom: 17px;
+			padding-left: 17px;
+			gap: 4px;
+		}
+		.input {
+			color: #18181B;
+			font-size: 12px;
+			background: #FAFAFA;
+			border-radius: 8px;
+			border: 1px solid #D4D4D8;
+			padding: 10px 33px;
+			margin: 0 10px 0 0;
+		}
+
+		/* CARDS DOS EVENTOS */
+		.container_eventos {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 367px;
+			gap: 24px;
+		}
+		
+		.column6 {
+			display: flex;
+			flex-direction: column;
+			background: #FAFAFA;
+			border-radius: 16px;
+			border: 1px solid #E4E4E7;
+			padding: 1px;
+			box-shadow: 0px 1px 2px #0000001A;
+		}
+		.card_conteudo {
+			align-self: stretch;
+			padding: 20px;
+		}
+		
+		.estilo_dos_caracteristicas {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 4px;
+			padding: 3px 9px;
+			gap:10px;
+		}
+		/* card_caracteriticas é o card de capacidade mesas e cadeiras*/
+		.card_caracteristicas {
+			width: 179px;
+			display: flex;
+			flex-direction: column;
+			box-sizing: border-box;
+			background: #FFFFFF;
+			border-radius: 8px;
+			border: 1px solid #E4E4E7;
+			padding: 9px;
+		}
+		.img_evento {
+			width: 100%;
+			height: 176px;
+			object-fit: fill;
+		}
+		.titulo_card {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.container_servicos_extras {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			padding-top: 12px;
+			gap: 4px;
+		}
+		/* Texto da navbar e dos preços */
+		.texto_preto_negrito {
+			color: #18181B;
+			font-size: 14px;
+			font-weight: bold;
+		}
+
+		/* Textos da parte do "caminho" e de "selecionar evento" */
+		.textos_brancos {
+			color: #FFFFFF;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.texto_caminho_inativo {
+			color: #18181B;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.texto_cinza {
+			color: #3F3F47;
+			font-size: 12px;
+		}
+		.titulo {
+			color: #18181B;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.texto_caracteristicas {
+			color: #71717B;
+			font-size: 11px;
+		}
+		.texto_qtd_caracteristicas {
+			color: #18181B;
+			font-size: 11px;
+			font-weight: bold;
+		}
+
+		/* FOOTER */
+		footer{
+			display: flex;
+    		justify-content: center;
+		}
+		.text-footer {
+			color: #000000;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		
+		
+		.badge_serviços_inclusos {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 4px;
+			border: 1px solid #E4E4E7;
+			padding: 3px 9px;
+		}

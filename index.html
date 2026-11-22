@@ -3,966 +3,191 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Let's Party </title>
-	<style>
-		body {
-			font-family: system-ui;
-		}
-		/* .absolute-column {
-			position: absolute;
-			bottom: -51px;
-			left: 0px;
-			width: 597px;
-			box-sizing: border-box;
-			display: flex;
-			flex-direction: column;
-			background: #FAFAFA;
-			border-radius: 16px;
-			border: 1px solid #E4E4E7;
-			padding-top: 1px;
-			box-shadow: 0px 1px 2px #0000001A;
-		} */
-		.absolute-view {
-			position: absolute;
-			top: 0px;
-			bottom: 0;
-			right: -102px;
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #FFFFFF;
-			border-radius: 4px;
-			border: 1px solid #E4E4E7;
-			padding: 3px 8px;
-		}
-		.button {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #18181B;
-			border-radius: 37282700px;
-			border: none;
-			padding: 12px 7px;
-			margin-left: 15px;
-			text-align: left;
-		}
-		.button2 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #18181B;
-			border-radius: 8px;
-			border: 1px solid #18181B;
-			padding: 8px 14px;
-			box-shadow: 0px 1px 3px #0000001A;
-			text-align: left;
-		}
-		.button3 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #FFFFFF;
-			border-radius: 8px;
-			border: 1px solid #E4E4E7;
-			padding: 8px 14px;
-			text-align: left;
-		}
-		.button-row-view {
-			align-self: stretch;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background: #18181B;
-			border-radius: 12px;
-			border: none;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			margin-bottom: 20px;
-			margin-left: 20px;
-			margin-right: 20px;
-			gap: 10px;
-			box-shadow: 0px 1px 2px #0000001A;
-			text-align: left;
-		}
-		.button-row-view2 {
-			align-self: stretch;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background: #18181B;
-			border-radius: 12px;
-			border: none;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			margin-bottom: 21px;
-			margin-left: 21px;
-			margin-right: 21px;
-			gap: 10px;
-			box-shadow: 0px 1px 2px #0000001A;
-			text-align: left;
-		}
-		.column {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			background: #FFFFFF;
-			padding-bottom: 24px;
-		}
-		.column2 {
-			align-self: stretch;
-			align-items: flex-start;
-			margin-bottom: 201px;
-			margin-left: 111px;
-			margin-right: 111px;
-			position: relative;
-		}
-		.column3 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			gap: 24px;
-		}
-		.column4 {
-			align-self: stretch;
-			padding-top: 24px;
-		}
-		.column5 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			background: #FFFFFF;
-			border-radius: 12px;
-			border: 1px solid #E4E4E7;
-			padding-top: 17px;
-			padding-bottom: 17px;
-			padding-left: 17px;
-			gap: 4px;
-		}
-		.column6 {
-			display: flex;
-			flex-direction: column;
-			weight: auto ;
-			background: #FAFAFA;
-			border-radius: 16px;
-			border: 1px solid #E4E4E7;
-			padding: 1px;
-			box-shadow: 0px 1px 2px #0000001A;
-		}
-		.column7 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		.column8 {
-			align-self: stretch;
-			padding: 20px;
-		}
-		.column9 {
-			width: 179px;
-			box-sizing: border-box;
-			background: #FFFFFF;
-			border-radius: 8px;
-			border: 1px solid #E4E4E7;
-			padding: 9px;
-		}
-		.column10 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			padding-top: 12px;
-			gap: 4px;
-		}
-		.column11 {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			position: relative;
-		}
-		.column12 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			margin-bottom: 25px;
-		}
-		.column13 {
-			width: 179px;
-			box-sizing: border-box;
-			background: #FFFFFF;
-			border-radius: 8px;
-			border: 1px solid #E4E4E7;
-			padding: 9px;
-			margin-right: 8px;
-		}
-		.column14 {
-			width: 179px;
-			box-sizing: border-box;
-			background: #FFFFFF;
-			border-radius: 8px;
-			border: 1px solid #E4E4E7;
-			padding: 9px;
-			margin-right: 9px;
-		}
-		.column15 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			margin-left: 1px;
-			margin-right: 1px;
-		}
-		.contain {
-			display: flex;
-			flex-direction: column;
-			background: #FFFFFF;
-		}
-		.image {
-			border-radius: 70px;
-			width: 101px;
-			height: 56px;
-			object-fit: fill;
-		}
-		.img_config {
-			width: 40px;
-			height: auto;
-			color: #000000;
-		}
-		.image3 {
-			border-radius: 10px;
-			width: 30px;
-			height: 30px;
-			margin-right: 4px;
-			object-fit: fill;
-		}
-		/* .image4 {
-			border-radius: 12px;
-			width: 14px;
-			height: 14px;
-			object-fit: fill;
-		} */
-		.img_evento {
-			width: 100%;
-			height: 176px;
-			object-fit: fill;
-		}
-		.image6 {
-			border-radius: 12px;
-			width: 16px;
-			height: 16px;
-			object-fit: fill;
-		}
-		.input {
-			color: #18181B;
-			font-size: 12px;
-			align-self: stretch;
-			background: #FAFAFA;
-			border-radius: 8px;
-			border: 1px solid #D4D4D8;
-			padding: 10px 33px;
-		}
-		.row-view {
-			align-self: stretch;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			background: #FFFFFF;
-			padding-bottom: 1px;
-			padding-left: 16px;
-			padding-right: 16px;
-			margin-bottom: 32px;
-			box-shadow: 0px 1px 2px #0000001A;
-		}
-		.row-view2 {
-			flex-shrink: 0;
-			display: flex;
-			align-items: center;
-			padding-left: 9px;
-			padding-right: 9px;
-			gap: 15px;
-		}
-		.row-view3 {
-			flex-shrink: 0;
-			display: flex;
-			align-items: center;
-			border-radius: 10px;
-			border: 1px solid #E4E4E7;
-			padding-top: 5px;
-			padding-bottom: 5px;
-		}
-		.row-view4 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-			background: #FFFFFF;
-			border-radius: 12px;
-			border: 1px solid #E4E4E7;
-			padding: 13px 6px;
-			margin-right: 26px;
-			gap: 8px;
-		}
-		.container_eventos {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			margin-bottom: 367px;
-			gap: 24px;
-		}
-		.row-view6 {
-			align-self: stretch;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-		.row-view7 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-			padding-top: 12px;
-			gap: 9px;
-		}
-		.row-view8 {
-			width: 422px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-		.row-view9 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-			padding-top: 12px;
-		}
-		.row-view10 {
-			align-self: stretch;
-			display: flex;
-			align-items: flex-start;
-			padding-top: 12px;
-			gap: 4px;
-		}
-		.text {
-			color: #18181B;
-			font-size: 14px;
-			font-weight: bold;
-		}
-		.text2 {
-			color: #FFFFFF;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text3 {
-			color: #18181B;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text4 {
-			color: #3F3F47;
-			font-size: 12px;
-		}
-		.text5 {
-			color: #18181B;
-			font-size: 16px;
-			font-weight: bold;
-		}
-		.text6 {
-			color: #71717B;
-			font-size: 11px;
-		}
-		.text7 {
-			color: #18181B;
-			font-size: 11px;
-			font-weight: bold;
-		}
-		.text8 {
-			color: #3F3F47;
-			font-size: 10px;
-		}
-		footer{
-			display: flex;
-    		justify-content: center;
-		}
-		.text-footer {
-			color: #000000;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.view {
-			overflow: hidden;
-			align-self: stretch;
-			background: #FFFFFF;
-		}
-		.view2 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			padding-left: 14px;
-			padding-right: 14px;
-		}
-		.view3 {
-			align-self: stretch;
-			background: #FAFAFA;
-			border-radius: 16px;
-			border: 1px solid #E4E4E7;
-			padding: 37px 21px 21px 21px;
-			margin-bottom: 75px;
-			box-shadow: 0px 1px 2px #0000001A;
-		}
-		.view4 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		.view5 {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-		.view6 {
-			width: 206px;
-		}
-		.view7 {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #FFFFFF;
-			border-radius: 4px;
-			border: 1px solid #E4E4E7;
-			padding: 3px 9px;
-		}
-		.view8 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-end;
-		}
-		.view9 {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #FFFFFF;
-			border-radius: 4px;
-			border: 1px solid #E4E4E7;
-			padding: 3px 8px;
-		}
-		.view10 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #FFFFFF;
-			border-radius: 4px;
-			border: 1px solid #E4E4E7;
-			padding: 3px 8px;
-		}
-		.view11 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #FFFFFF;
-			border-radius: 4px;
-			border: 1px solid #E4E4E7;
-			padding: 3px 9px;
-		}
-	</style>
 </head>
 <body>
-	<div class="contain">
-		<div class="view">
-			<header>
-				<nav class="column">
-					<div class="row-view">
-						<img
-							src="img/logo.jpg" 
-							class="image"
-						/>
-						<div class="view2">
-							<span class="text" >
-								Let’s Party
-							</span>
-						</div>
-						<div class="row-view2">
-							<img
-								src="img/config.png" 
-								class="img_config"
-							/>
-
-						</div>
-					</nav>
-				</header>
-				<main class="column2">
-					<div class="column3">
-						<div class="row-view4">
-							<button class="button2"
-								>
-								<span class="text2" >
-									1. Local
-								</span>
-							</button>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/fmincxkt_expires_30_days.png" 
-								class="image4"
-							/>
-							<button class="button3"
-								>
-								<span class="text3" >
-									2. Configurar Festa
-								</span>
-							</button>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/qkb6jyvr_expires_30_days.png" 
-								class="image4"
-							/>
-							<button class="button3"
-								>
-								<span class="text3" >
-									3. Resumo
-								</span>
-							</button>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/bkuwe3r6_expires_30_days.png" 
-								class="image4"
-							/>
-							<button class="button3"
-								>
-								<span class="text3" >
-									4. Confirmação
-								</span>
-							</button>
-						</div>
-						<div class="column4">
-							<div class="view3">
-								<div class="column5">
-									<div class="view4">
-										<span class="text4" >
-											Buscar por Bairro ou Nome:
-										</span>
-									</div>
-									<input
-										type="text"
-										placeholder="Ex: Tijuca, Barra, Botafogo..."
-										class="input"
-									/>
-								</div>
-							</div>
-
-							
-							<div class="container_eventos">
-								<!-- Card 1 -->
-								<div class="column6">
-									<div class="column7">
-										<img
-											src="img/evento1.jpeg" 
-											class="img_evento"
-										/>
-										<div class="column8">
-											<div class="row-view6">
-												<span class="text5" >
-													Espaço Jardim da Barra
-												</span>
-												<span class="text" >
-													R$ 2.500
-												</span>
-											</div>
-											<div class="row-view7">
-												<div class="column9">
-													<div class="view5">
-														<span class="text6" >
-															Capacidade
-														</span>
-													</div>
-													<div class="view5">
-														<span class="text7" >
-															100 p.
-														</span>
-													</div>
-												</div>
-												<div class="column9">
-													<div class="view5">
-														<span class="text6" >
-															Mesas Máx
-														</span>
-													</div>
-													<div class="view5">
-														<span class="text7" >
-															15 mes.
-														</span>
-													</div>
-												</div>
-												<div class="column9">
-													<div class="view5">
-														<span class="text6" >
-															Cadeiras Máx
-														</span>
-													</div>
-													<div class="view5">
-														<span class="text7" >
-															80 cad.
-														</span>
-													</div>
-												</div>
-											</div>
-											<div class="column10">
-												<div class="row-view8">
-													<div class="view6">
-														<div class="column7">
-															<div class="view7">
-																<span class="text8" >
-																	✓ Piscina
-																</span>
-															</div>
-															<div class="view8">
-																<div class="column11">
-																	<div class="view9">
-																		<span class="text8" >
-																			✓ Churrasqueira Goumert
-																		</span>
-																	</div>
-																	<div class="absolute-view">
-																		<span class="text8" >
-																			✓ Ar Condicionado
-																		</span>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="view10">
-														<span class="text8" >
-															✓ Cozinha Industrial
-														</span>
-													</div>
-												</div>
-												<div class="view7">
-													<span class="text8" >
-														✓ Estacionamento (15 vagas)
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<button class="button-row-view"
-										>
-										<span class="text2" >
-											Selecionar este local e criar Festa
-										</span>
-										<img
-											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/1iymblr9_expires_30_days.png" 
-											class="image6"
-										/>
-									</button>
-								</div>
+<!-- Cabeçalho -->
+<header>
+	<nav>
+		<div class="organizar_navbar">
+			<a href="index.html">
+				<img src="img/logo.jpg" class="logo">
+			</a>
+			<span class="texto_preto_negrito" >Let’s Party</span>
+			<img src="img/config.png" class="img_config">
+		</div>
+	</nav>
+</header>
 
 
-								<!-- Card 2 -->
-								<div class="column6">
-									<div class="column12">
-										<img
-											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/4ckgtska_expires_30_days.png" 
-											class="img_evento"
-										/>
-										<div class="column8">
-											<div class="row-view6">
-												<span class="text5" >
-													Salão Real Tijuca
-												</span>
-												<span class="text" >
-													R$ 1.400
-												</span>
-											</div>
-											<div class="row-view9">
-												<div class="column13">
-													<div class="view5">
-														<span class="text6" >
-															Capacidade
-														</span>
-													</div>
-													<div class="view5">
-														<span class="text7" >
-															60 p.
-														</span>
-													</div>
-												</div>
-												<div class="column14">
-													<div class="view5">
-														<span class="text6" >
-															Mesas Máx
-														</span>
-													</div>
-													<div class="view5">
-														<span class="text7" >
-															10 mes.
-														</span>
-													</div>
-												</div>
-												<div class="column9">
-													<div class="view5">
-														<span class="text6" >
-															Cadeiras Máx
-														</span>
-													</div>
-													<div class="view5">
-														<span class="text7" >
-															50 cad.
-														</span>
-													</div>
-												</div>
-											</div>
-											<div class="row-view10">
-												<div class="view11">
-													<span class="text8" >
-														✓ Som Integrado
-													</span>
-												</div>
-												<div class="view11">
-													<span class="text8" >
-														✓ Pista de Dança
-													</span>
-												</div>
-												<div class="view11">
-													<span class="text8" >
-														✓ Cozinha com Freezer
-													</span>
-												</div>
-												<div class="view11">
-													<span class="text8" >
-														✓ Acessibilidade
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<button class="button-row-view"
-										>
-										<span class="text2" >
-											Selecionar este local e criar Festa
-										</span>
-										<img
-											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/76w00ff5_expires_30_days.png" 
-											class="image6"
-										/>
-									</button>
-								</div>
-
-								<!-- Card 3 -->
-								<div class="column6">
-									<div class="column7">
-										<img
-											src="img/evento3.jpeg" 
-											class="img_evento"
-										/>
-										<div class="column8">
-											<div class="row-view6">
-												<span class="text5" >
-													Chácara Sol &amp; Festa Botafogo
-												</span>
-												<span class="text" >
-													R$ 1.200
-												</span>
-											</div>
-											<div class="row-view7">
-												<div class="column9">
-													<div class="view5">
-														<span class="text6" >
-															Capacidade
-														</span>
-													</div>
-													<div class="view5">
-														<span class="text7" >
-															100 pessoas
-														</span>
-													</div>
-												</div>
-												<div class="column9">
-													<div class="view5">
-														<span class="text6" >
-															Mesas Máx
-														</span>
-													</div>
-													<div class="view5">
-														<span class="text7" >
-															15 mesas
-														</span>
-													</div>
-												</div>
-												<div class="column9">
-													<div class="view5">
-														<span class="text6" >
-															Cadeiras (Máximo)
-														</span>
-													</div>
-													<div class="view5">
-														<span class="text7" >
-															80 cadeiras
-														</span>
-													</div>
-												</div>
-											</div>
-											<div class="column10">
-												<div class="row-view8">
-													<div class="view6">
-														<div class="column7">
-															<div class="view7">
-																<span class="text8" >
-																	✓ Piscina
-																</span>
-															</div>
-															<div class="view8">
-																<div class="column11">
-																	<div class="view9">
-																		<span class="text8" >
-																			✓ Churrasqueira Goumert
-																		</span>
-																	</div>
-																	<div class="absolute-view">
-																		<span class="text8" >
-																			✓ Ar Condicionado
-																		</span>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="view10">
-														<span class="text8" >
-															✓ Cozinha Industrial
-														</span>
-													</div>
-												</div>
-												<div class="view7">
-													<span class="text8" >
-														✓ Estacionamento (15 vagas)
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<button class="button-row-view"
-										>
-										<span class="text2" >
-											Selecionar este local e criar Festa
-										</span>
-										<img
-											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/1iymblr9_expires_30_days.png" 
-											class="image6"
-										/>
-									</button>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-
-					<div class="absolute-column">
-						<!-- <div class="column15">
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/o6e89t3k_expires_30_days.png" 
-								class="img_evento"
-							/>
-							<div class="column8">
-								<div class="row-view6">
-									<span class="text5" >
-										Chácara Sol &amp; Festa Botafogo
-									</span>
-									<span class="text" >
-										R$ 1.200
-									</span>
-								</div>
-								<div class="row-view7">
-									<div class="column9">
-										<div class="view5">
-											<span class="text6" >
-												Capacidade
-											</span>
-										</div>
-										<div class="view5">
-											<span class="text7" >
-												120 p.
-											</span>
-										</div>
-									</div>
-									<div class="column9">
-										<div class="view5">
-											<span class="text6" >
-												Mesas Máx
-											</span>
-										</div>
-										<div class="view5">
-											<span class="text7" >
-												20 mes.
-											</span>
-										</div>
-									</div>
-									<div class="column9">
-										<div class="view5">
-											<span class="text6" >
-												Cadeiras Máx
-											</span>
-										</div>
-										<div class="view5">
-											<span class="text7" >
-												100 cad.
-											</span>
-										</div>
-									</div>
-								</div>
-								<div class="row-view10">
-									<div class="view11">
-										<span class="text8" >
-											✓ Área Verde Externa
-										</span>
-									</div>
-									<div class="view11">
-										<span class="text8" >
-											✓ Churrasqueira
-										</span>
-									</div>
-									<div class="view11">
-										<span class="text8" >
-											✓ Gerador Próprio
-										</span>
-									</div>
-									<div class="view11">
-										<span class="text8" >
-											✓ Espaço Kids
-										</span>
-									</div>
-									<div class="view11">
-										<span class="text8" >
-											✓ Iluminação Cênica
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<button class="button-row-view2"
-							>
-							<span class="text2" >
-								Selecionar este local e criar Festa
-							</span>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/jaqkuda5_expires_30_days.png" 
-								class="image6"
-							/>
-						</button>
-					</div> -->
-				</main>
-				<footer>
-					<span class="text-footer">
-						© 2026 Let’s Party. Todos os direitos reservados.
-					</span>
-				</footer>
-			</div>
+<!-- Conteúdo principal -->
+<main id="main_principal">
+	<div class="container_caminho">
+		<div class="caminho_ativo">
+			<span class="textos_brancos" >1. Local</span>
+		</div>
+		<img src="img/seta.png" class="seta_img">
+		<div class="caminho_inativo">
+			<span class="texto_caminho_inativo"> 2. Configurar Festa </span>
+		</div>
+		<img src="img/seta.png" class="seta_img">
+		<div class="caminho_inativo">
+			<span class="texto_caminho_inativo"> 3. Resumo </span>
+		</div>
+		<img src="img/seta.png" class="seta_img">
+							<div class="caminho_inativo">
+			<span class="texto_caminho_inativo"> 4. Confirmação </span>
 		</div>
 	</div>
+	<br><br>
+		<div class="container_busca">
+			<div class="box_busca">
+					<h3 class="texto_cinza" >Buscar por Bairro ou Nome: </h3>
+					<input type="text" placeholder="Ex: Tijuca, Barra, Botafogo..." class="input">
+			</div>
+		</div>
+							
+		<div class="container_eventos">
+
+		<!-- Card 1 -->
+		<div class="column6">
+					<img src="img/evento1.jpeg" class="img_evento">
+				<div class="card_conteudo">
+					<div class="titulo_card">
+						<span class="titulo"> Espaço Jardim da Barra </span>
+						<span class="texto_preto_negrito"> R$ 2.500 </span>
+					</div>
+					<div class="estilo_dos_caracteristicas">
+						<div class="card_caracteristicas">
+							<span class="texto_caracteristicas"> Capacidade </span>													
+							<span class="texto_qtd_caracteristicas" > 100 pessoas </span>
+						</div>
+						<div class="card_caracteristicas">
+							<span class="texto_caracteristicas"> Mesas (Máximo) </span>
+							<span class="texto_qtd_caracteristicas" > 15 mesas </span>
+						</div>
+						<div class="card_caracteristicas">
+							<span class="texto_caracteristicas" > Cadeiras (Máximo) </span>
+							<span class="texto_qtd_caracteristicas" > 80 cadeiras </span>
+						</div>
+					</div>
+					<div class="container_servicos_extras">
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Piscina </span>
+						</div>
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Churrasqueira Gourmet </span>
+						</div>
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Ar Condicionado </span>
+						</div>
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Cozinha extra </span>
+						</div>
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Estacionamento(15 vagas)</span>
+						</div>
+					</div>
+				</div>
+			
+			<a href="Evento.html" class="selecionar_evento" >
+				<span class="textos_brancos"> <strong> Selecionar este local e criar Festa > </strong> </span>
+			</a>
+		</div>
+		
+		<!-- Card 2 -->
+		<div class="column6">
+				<img src="img/evento2.jpeg" class="img_evento">
+				<div class="card_conteudo">
+					<div class="titulo_card">
+						<span class="titulo" >Salão Real Tijuca </span>
+						<span class="texto_preto_negrito"> R$ 1.400 </span>
+					</div>
+					<div class="estilo_dos_caracteristicas">
+						<div class="card_caracteristicas">
+								<span class="texto_caracteristicas"> Capacidade </span>
+								<span class="texto_qtd_caracteristicas"> 60 pessoas </span>
+						</div>
+						<div class="card_caracteristicas">
+								<span class="texto_caracteristicas"> Mesas (Máximo) </span>
+								<span class="texto_qtd_caracteristicas"> 10 mesas </span>
+						</div>
+						<div class="card_caracteristicas">
+							<span class="texto_caracteristicas"> 	Cadeiras (Máximo) </span>
+							<span class="texto_qtd_caracteristicas"> 50 cadeiras </span>
+						</div>
+					</div>
+					<div class="container_servicos_extras">
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Som Integrado </span>
+						</div>
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Pista de Dança </span>
+						</div>
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Cozinha com Freezer </span>
+						</div>
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Acessibilidade </span>
+						</div>
+					</div>
+				</div>
+			<a href="#" class="selecionar_evento">
+				<span class="textos_brancos"> Selecionar este local e criar Festa > </span>
+			</a>
+		</div>
+
+		<!-- Card 3 -->
+		<div class="column6">
+				<img src="img/evento3.jpeg" class="img_evento">
+				<div class="card_conteudo">
+					<div class="titulo_card">
+						<span class="titulo"> Chácara Sol &amp; Festa Botafogo </span>
+						<span class="texto_preto_negrito"> R$ 1.200 </span>
+					</div>
+					<div class="estilo_dos_caracteristicas">
+						<div class="card_caracteristicas">
+							<span class="texto_caracteristicas"> Capacidade </span>
+								<span class="texto_qtd_caracteristicas"> 100 pessoas </span>
+						</div>
+						<div class="card_caracteristicas">
+							<span class="texto_caracteristicas"> Mesas Máx </span>
+							<span class="texto_qtd_caracteristicas"> 15 mesas </span>
+						</div>
+						<div class="card_caracteristicas">
+							<span class="texto_caracteristicas"> Cadeiras (Máximo) </span>
+							<span class="texto_qtd_caracteristicas"> 80 cadeiras </span>
+						</div>
+					</div>
+					<div class="container_servicos_extras">
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Área Verde Externa</span>
+						</div>
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Churrasqueira </span>
+						</div>
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Gerador Próprio </span>
+						</div>
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Espaço Kids </span>
+						</div>
+						<div class="badge_serviços_inclusos">
+							<span class="texto_cinza"> ✓ Iluminação Extra </span>
+						</div>
+					</div>
+				</div>
+			<a href="#" class="selecionar_evento">
+				<span class="textos_brancos">Selecionar este local e criar Festa > </span>
+			</a>
+		</div>
+	</div>
+</main>
+
+<!-- Rodapé -->
+<footer>
+	<span class="text-footer"> © 2026 Let’s Party. Todos os direitos reservados. </span>
+</footer>
 </body>
 </html> 

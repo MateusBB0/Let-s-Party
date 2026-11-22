@@ -8,14 +8,14 @@
 		body {
 			font-family: system-ui;
 		}
-		.absolute-column {
+		/* .absolute-column {
 			position: absolute;
 			bottom: 137px;
 			left: 132px;
 			width: 762px;
 			box-sizing: border-box;
 			padding-top: 31px;
-		}
+		} */
 		.absolute-column2 {
 			position: absolute;
 			top: 178px;
@@ -199,7 +199,6 @@
 			text-align: left;
 		}
 		.column {
-			align-self: stretch;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -673,35 +672,26 @@
 		<div class="contain">
 		<div class="view">
 			<div class="column">
-				<div class="row-view">
-					<img
-						src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/c6deh560_expires_30_days.png" 
-						class="image"
-					/>
-					<div class="view2">
-						<span class="text" >
-							Let’s Party
-						</span>
-					</div>
-					<div class="row-view2">
-						<img
-							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/zx4jy9j8_expires_30_days.png" 
-							class="image2"
-						/>
-						<div class="row-view3">
-							<button class="button"
-								onclick="alert('Pressed!')"}>
-								<span class="text2" >
-									User
-								</span>
-							</button>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/4zzs9eb5_expires_30_days.png" 
-								class="image3"
-							/>
+				<header>
+					<nav>
+						<div class="row-view">
+						<a href="index.html">
+							<img src="img/logo.jpg" class="image">
+						</a>
+						<div class="view2">
+							<span class="text" >
+								Let’s Party
+							</span>
 						</div>
-					</div>
-				</div>
+						<div class="row-view2">
+							<img
+								src="img/config.png" 
+								class="img_config"
+							/>
+
+						</div>
+					</nav>
+				</header>
 				<div class="column2">
 					<div class="column3">
 						<div class="row-view4">
@@ -1000,9 +990,11 @@
 						</button>
 					</div>
 				</div>
-				<span class="text22" >
-					© 2026 Let’s Party. Todos os direitos reservados.
-				</span>
+				
+<!-- Rodapé -->
+<footer>
+	<span class="text-footer"> © 2026 Let’s Party. Todos os direitos reservados. </span>
+</footer>
 			</div>
 		</div>
 	</div>
