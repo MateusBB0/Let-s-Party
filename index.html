@@ -3,161 +3,631 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> Home </title>
-	<script src="https://cdn.tailwindcss.com"></script>
+	<title>Let's Party </title>
 	<style>
 		body {
 			font-family: system-ui;
 		}
+		/* .absolute-column {
+			position: absolute;
+			bottom: -51px;
+			left: 0px;
+			width: 597px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			background: #FAFAFA;
+			border-radius: 16px;
+			border: 1px solid #E4E4E7;
+			padding-top: 1px;
+			box-shadow: 0px 1px 2px #0000001A;
+		} */
+		.absolute-view {
+			position: absolute;
+			top: 0px;
+			bottom: 0;
+			right: -102px;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 4px;
+			border: 1px solid #E4E4E7;
+			padding: 3px 8px;
+		}
+		.button {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #18181B;
+			border-radius: 37282700px;
+			border: none;
+			padding: 12px 7px;
+			margin-left: 15px;
+			text-align: left;
+		}
+		.button2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #18181B;
+			border-radius: 8px;
+			border: 1px solid #18181B;
+			padding: 8px 14px;
+			box-shadow: 0px 1px 3px #0000001A;
+			text-align: left;
+		}
+		.button3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 8px;
+			border: 1px solid #E4E4E7;
+			padding: 8px 14px;
+			text-align: left;
+		}
+		.button-row-view {
+			align-self: stretch;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #18181B;
+			border-radius: 12px;
+			border: none;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-bottom: 20px;
+			margin-left: 20px;
+			margin-right: 20px;
+			gap: 10px;
+			box-shadow: 0px 1px 2px #0000001A;
+			text-align: left;
+		}
+		.button-row-view2 {
+			align-self: stretch;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #18181B;
+			border-radius: 12px;
+			border: none;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-bottom: 21px;
+			margin-left: 21px;
+			margin-right: 21px;
+			gap: 10px;
+			box-shadow: 0px 1px 2px #0000001A;
+			text-align: left;
+		}
+		.column {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: #FFFFFF;
+			padding-bottom: 24px;
+		}
+		.column2 {
+			align-self: stretch;
+			align-items: flex-start;
+			margin-bottom: 201px;
+			margin-left: 111px;
+			margin-right: 111px;
+			position: relative;
+		}
+		.column3 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+		}
+		.column4 {
+			align-self: stretch;
+			padding-top: 24px;
+		}
+		.column5 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+			border-radius: 12px;
+			border: 1px solid #E4E4E7;
+			padding-top: 17px;
+			padding-bottom: 17px;
+			padding-left: 17px;
+			gap: 4px;
+		}
+		.column6 {
+			display: flex;
+			flex-direction: column;
+			weight: auto ;
+			background: #FAFAFA;
+			border-radius: 16px;
+			border: 1px solid #E4E4E7;
+			padding: 1px;
+			box-shadow: 0px 1px 2px #0000001A;
+		}
+		.column7 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.column8 {
+			align-self: stretch;
+			padding: 20px;
+		}
+		.column9 {
+			width: 179px;
+			box-sizing: border-box;
+			background: #FFFFFF;
+			border-radius: 8px;
+			border: 1px solid #E4E4E7;
+			padding: 9px;
+		}
+		.column10 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 12px;
+			gap: 4px;
+		}
+		.column11 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+		}
+		.column12 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 25px;
+		}
+		.column13 {
+			width: 179px;
+			box-sizing: border-box;
+			background: #FFFFFF;
+			border-radius: 8px;
+			border: 1px solid #E4E4E7;
+			padding: 9px;
+			margin-right: 8px;
+		}
+		.column14 {
+			width: 179px;
+			box-sizing: border-box;
+			background: #FFFFFF;
+			border-radius: 8px;
+			border: 1px solid #E4E4E7;
+			padding: 9px;
+			margin-right: 9px;
+		}
+		.column15 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-left: 1px;
+			margin-right: 1px;
+		}
+		.contain {
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+		}
+		.image {
+			border-radius: 70px;
+			width: 101px;
+			height: 56px;
+			object-fit: fill;
+		}
+		.img_config {
+			width: 40px;
+			height: auto;
+			color: #000000;
+		}
+		.image3 {
+			border-radius: 10px;
+			width: 30px;
+			height: 30px;
+			margin-right: 4px;
+			object-fit: fill;
+		}
+		/* .image4 {
+			border-radius: 12px;
+			width: 14px;
+			height: 14px;
+			object-fit: fill;
+		} */
+		.img_evento {
+			width: 100%;
+			height: 176px;
+			object-fit: fill;
+		}
+		.image6 {
+			border-radius: 12px;
+			width: 16px;
+			height: 16px;
+			object-fit: fill;
+		}
+		.input {
+			color: #18181B;
+			font-size: 12px;
+			align-self: stretch;
+			background: #FAFAFA;
+			border-radius: 8px;
+			border: 1px solid #D4D4D8;
+			padding: 10px 33px;
+		}
+		.row-view {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: #FFFFFF;
+			padding-bottom: 1px;
+			padding-left: 16px;
+			padding-right: 16px;
+			margin-bottom: 32px;
+			box-shadow: 0px 1px 2px #0000001A;
+		}
+		.row-view2 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			padding-left: 9px;
+			padding-right: 9px;
+			gap: 15px;
+		}
+		.row-view3 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			border-radius: 10px;
+			border: 1px solid #E4E4E7;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		.row-view4 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 12px;
+			border: 1px solid #E4E4E7;
+			padding: 13px 6px;
+			margin-right: 26px;
+			gap: 8px;
+		}
+		.container_eventos {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin-bottom: 367px;
+			gap: 24px;
+		}
+		.row-view6 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.row-view7 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			padding-top: 12px;
+			gap: 9px;
+		}
+		.row-view8 {
+			width: 422px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.row-view9 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			padding-top: 12px;
+		}
+		.row-view10 {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			padding-top: 12px;
+			gap: 4px;
+		}
+		.text {
+			color: #18181B;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.text2 {
+			color: #FFFFFF;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text3 {
+			color: #18181B;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.text4 {
+			color: #3F3F47;
+			font-size: 12px;
+		}
+		.text5 {
+			color: #18181B;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text6 {
+			color: #71717B;
+			font-size: 11px;
+		}
+		.text7 {
+			color: #18181B;
+			font-size: 11px;
+			font-weight: bold;
+		}
+		.text8 {
+			color: #3F3F47;
+			font-size: 10px;
+		}
+		footer{
+			display: flex;
+    		justify-content: center;
+		}
+		.text-footer {
+			color: #000000;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.view {
+			overflow: hidden;
+			align-self: stretch;
+			background: #FFFFFF;
+		}
+		.view2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 14px;
+			padding-right: 14px;
+		}
+		.view3 {
+			align-self: stretch;
+			background: #FAFAFA;
+			border-radius: 16px;
+			border: 1px solid #E4E4E7;
+			padding: 37px 21px 21px 21px;
+			margin-bottom: 75px;
+			box-shadow: 0px 1px 2px #0000001A;
+		}
+		.view4 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.view5 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.view6 {
+			width: 206px;
+		}
+		.view7 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 4px;
+			border: 1px solid #E4E4E7;
+			padding: 3px 9px;
+		}
+		.view8 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+		.view9 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 4px;
+			border: 1px solid #E4E4E7;
+			padding: 3px 8px;
+		}
+		.view10 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 4px;
+			border: 1px solid #E4E4E7;
+			padding: 3px 8px;
+		}
+		.view11 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 4px;
+			border: 1px solid #E4E4E7;
+			padding: 3px 9px;
+		}
 	</style>
 </head>
 <body>
-		<div class="flex flex-col bg-white">
-		<div class="self-stretch bg-white overflow-hidden">
-			<div class="flex flex-col items-center self-stretch bg-white pb-6">
-				<nav class="flex justify-between items-center self-stretch bg-white pb-[1px] px-4 mb-8" style="box-shadow: 0px 1px 2px #0000001A">
-					<img src="img/logo.jpg" class="w-[101px] h-14 rounded-[70px] object-fill" alt="logo">
-					<div class="flex flex-col shrink-0 items-start px-3.5">
-						<span class="text-zinc-900 text-sm font-bold" >
-							Let's Party
-						</span>
-					</div>
-					<div class="flex shrink-0 items-center py-0.5 px-[3px] gap-[23px]">
+	<div class="contain">
+		<div class="view">
+			<header>
+				<nav class="column">
+					<div class="row-view">
 						<img
-							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/e12zshut_expires_30_days.png" 
-							class="w-[38px] h-[54px] object-fill"
+							src="img/logo.jpg" 
+							class="image"
 						/>
-						<div class="flex shrink-0 items-center py-[5px] rounded-[10px] border border-solid border-zinc-200">
-							<button class="flex flex-col shrink-0 items-start bg-zinc-900 text-left py-3 px-[7px] ml-[15px] rounded-[37282700px] border-0">
-								<span class="text-white text-xs font-bold" >
-									User
-								</span>
-							</button>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/jqbr83jb_expires_30_days.png" 
-								class="w-[30px] h-[30px] mr-1 rounded-[10px] object-fill"
-							/>
+						<div class="view2">
+							<span class="text" >
+								Let’s Party
+							</span>
 						</div>
-					</div>
-				</nav>
+						<div class="row-view2">
+							<img
+								src="img/config.png" 
+								class="img_config"
+							/>
 
-
-				<div class="items-start self-stretch relative mb-[201px] mx-[111px]">
-					<div class="flex flex-col self-stretch gap-6">
-						<div class="flex items-center self-stretch bg-white py-[13px] px-1.5 mr-[26px] gap-2 rounded-xl border border-solid border-zinc-200">
-							<button class="flex flex-col shrink-0 items-start bg-zinc-900 text-left py-2 px-3.5 rounded-lg border border-solid border-zinc-900" style="box-shadow: 0px 1px 3px #0000001A">
-								<span class="text-white text-xs font-bold" >
+						</div>
+					</nav>
+				</header>
+				<main class="column2">
+					<div class="column3">
+						<div class="row-view4">
+							<button class="button2"
+								>
+								<span class="text2" >
 									1. Local
 								</span>
 							</button>
 							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/qtqlobre_expires_30_days.png" 
-								class="w-3.5 h-3.5 rounded-xl object-fill"
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/fmincxkt_expires_30_days.png" 
+								class="image4"
 							/>
-							<button class="flex flex-col shrink-0 items-start bg-white text-left py-2 px-3.5 rounded-lg border border-solid border-zinc-200">
-								<span class="text-zinc-900 text-xs font-bold" >
+							<button class="button3"
+								>
+								<span class="text3" >
 									2. Configurar Festa
 								</span>
 							</button>
 							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/0ocfm7xq_expires_30_days.png" 
-								class="w-3.5 h-3.5 rounded-xl object-fill"
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/qkb6jyvr_expires_30_days.png" 
+								class="image4"
 							/>
-							<button class="flex flex-col shrink-0 items-start bg-white text-left py-2 px-3.5 rounded-lg border border-solid border-zinc-200">
-								<span class="text-zinc-900 text-xs font-bold" >
+							<button class="button3"
+								>
+								<span class="text3" >
 									3. Resumo
 								</span>
 							</button>
 							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/tfhwa6js_expires_30_days.png" 
-								class="w-3.5 h-3.5 rounded-xl object-fill"
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/bkuwe3r6_expires_30_days.png" 
+								class="image4"
 							/>
-							<button class="flex flex-col shrink-0 items-start bg-white text-left py-2 px-3.5 rounded-lg border border-solid border-zinc-200">
-								<span class="text-zinc-900 text-xs font-bold" >
+							<button class="button3"
+								>
+								<span class="text3" >
 									4. Confirmação
 								</span>
 							</button>
 						</div>
-						<div class="self-stretch pt-6">
-							<div class="self-stretch bg-neutral-50 pt-[37px] pb-[21px] px-[21px] mb-[75px] rounded-2xl border border-solid border-zinc-200" style="box-shadow: 0px 1px 2px #0000001A">
-								<div class="flex flex-col self-stretch bg-white py-[17px] pl-[17px] gap-1 rounded-xl border border-solid border-zinc-200">
-									<div class="flex flex-col items-start self-stretch">
-										<span class="text-[#3F3F47] text-xs" >
+						<div class="column4">
+							<div class="view3">
+								<div class="column5">
+									<div class="view4">
+										<span class="text4" >
 											Buscar por Bairro ou Nome:
 										</span>
 									</div>
-									<input type="text" placeholder="Ex: Tijuca, Barra, Botafogo..." class="self-stretch text-zinc-900 bg-neutral-50 text-xs py-2.5 px-[33px] rounded-lg border border-solid border-zinc-300">
+									<input
+										type="text"
+										placeholder="Ex: Tijuca, Barra, Botafogo..."
+										class="input"
+									/>
 								</div>
 							</div>
-							<div class="flex items-center self-stretch mb-[367px] gap-6">
-								<div class="flex flex-1 flex-col bg-neutral-50 p-[1px] rounded-2xl border border-solid border-zinc-200" style="box-shadow: 0px 1px 2px #0000001A">
-									<div class="flex flex-col items-start self-stretch">
-										<img src="img/evento1.jpeg" class="w-[595px] h-44 object-fill">
-										<div class="self-stretch p-5">
-											<div class="flex justify-between items-center self-stretch">
-												<span class="text-zinc-900 text-base font-bold" >
+
+							
+							<div class="container_eventos">
+								<!-- Card 1 -->
+								<div class="column6">
+									<div class="column7">
+										<img
+											src="img/evento1.jpeg" 
+											class="img_evento"
+										/>
+										<div class="column8">
+											<div class="row-view6">
+												<span class="text5" >
 													Espaço Jardim da Barra
 												</span>
-												<span class="text-zinc-900 text-sm font-bold" >
+												<span class="text" >
 													R$ 2.500
 												</span>
 											</div>
-											<div class="flex items-center self-stretch pt-3 gap-[9px]">
-												<div class="bg-white w-[179px] p-[9px] rounded-lg border border-solid border-zinc-200">
-													<div class="flex flex-col items-center self-stretch">
-														<span class="text-[#71717B] text-[11px]" >
+											<div class="row-view7">
+												<div class="column9">
+													<div class="view5">
+														<span class="text6" >
 															Capacidade
 														</span>
 													</div>
-													<div class="flex flex-col items-center self-stretch">
-														<span class="text-zinc-900 text-[11px] font-bold" >
+													<div class="view5">
+														<span class="text7" >
 															100 p.
 														</span>
 													</div>
 												</div>
-												<div class="bg-white w-[179px] p-[9px] rounded-lg border border-solid border-zinc-200">
-													<div class="flex flex-col items-center self-stretch">
-														<span class="text-[#71717B] text-[11px]" >
+												<div class="column9">
+													<div class="view5">
+														<span class="text6" >
 															Mesas Máx
 														</span>
 													</div>
-													<div class="flex flex-col items-center self-stretch">
-														<span class="text-zinc-900 text-[11px] font-bold" >
+													<div class="view5">
+														<span class="text7" >
 															15 mes.
 														</span>
 													</div>
 												</div>
-												<div class="bg-white w-[179px] p-[9px] rounded-lg border border-solid border-zinc-200">
-													<div class="flex flex-col items-center self-stretch">
-														<span class="text-[#71717B] text-[11px]" >
+												<div class="column9">
+													<div class="view5">
+														<span class="text6" >
 															Cadeiras Máx
 														</span>
 													</div>
-													<div class="flex flex-col items-center self-stretch">
-														<span class="text-zinc-900 text-[11px] font-bold" >
+													<div class="view5">
+														<span class="text7" >
 															80 cad.
 														</span>
 													</div>
 												</div>
 											</div>
-											<div class="flex flex-col items-start self-stretch pt-3 gap-1">
-												<div class="flex justify-between items-center w-[422px]">
-													<div class="w-[206px]">
-														<div class="flex flex-col items-start self-stretch">
-															<div class="flex flex-col items-start bg-white py-[3px] px-[9px] rounded border border-solid border-zinc-200">
-																<span class="text-[#3F3F47] text-[10px]" >
+											<div class="column10">
+												<div class="row-view8">
+													<div class="view6">
+														<div class="column7">
+															<div class="view7">
+																<span class="text8" >
 																	✓ Piscina
 																</span>
 															</div>
-															<div class="flex flex-col items-end self-stretch">
-																<div class="flex flex-col items-center relative">
-																	<div class="flex flex-col items-start bg-white py-[3px] px-2 rounded border border-solid border-zinc-200">
-																		<span class="text-[#3F3F47] text-[10px]" >
+															<div class="view8">
+																<div class="column11">
+																	<div class="view9">
+																		<span class="text8" >
 																			✓ Churrasqueira Goumert
 																		</span>
 																	</div>
-																	<div class="flex flex-1 flex-col items-start bg-white absolute top-0 bottom-0 right-[-102px] py-[3px] px-2 rounded border border-solid border-zinc-200">
-																		<span class="text-[#3F3F47] text-[10px]" >
+																	<div class="absolute-view">
+																		<span class="text8" >
 																			✓ Ar Condicionado
 																		</span>
 																	</div>
@@ -165,205 +635,334 @@
 															</div>
 														</div>
 													</div>
-													<div class="flex flex-col shrink-0 items-start bg-white py-[3px] px-2 rounded border border-solid border-zinc-200">
-														<span class="text-[#3F3F47] text-[10px]" >
+													<div class="view10">
+														<span class="text8" >
 															✓ Cozinha Industrial
 														</span>
 													</div>
 												</div>
-												<div class="flex flex-col items-start bg-white py-[3px] px-[9px] rounded border border-solid border-zinc-200">
-													<span class="text-[#3F3F47] text-[10px]" >
+												<div class="view7">
+													<span class="text8" >
 														✓ Estacionamento (15 vagas)
 													</span>
 												</div>
 											</div>
 										</div>
 									</div>
-									<button class="flex justify-center items-center self-stretch bg-zinc-900 text-left py-2.5 mb-5 mx-5 gap-2.5 rounded-xl border-0" style="box-shadow: 0px 1px 2px #0000001A;">
-										<span class="text-white text-xs font-bold" >
+									<button class="button-row-view"
+										>
+										<span class="text2" >
 											Selecionar este local e criar Festa
 										</span>
-										<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/ioewtihy_expires_30_days.png" class="w-4 h-4 rounded-xl object-fill">
+										<img
+											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/1iymblr9_expires_30_days.png" 
+											class="image6"
+										/>
 									</button>
 								</div>
 
-								<div class="flex flex-1 flex-col bg-neutral-50 p-[1px] rounded-2xl border border-solid border-zinc-200" style="box-shadow: 0px 1px 2px #0000001A">
-									<div class="flex flex-col items-start self-stretch mb-[25px]">
-										<img src="img/evento2.jpeg" class="w-[595px] h-44 object-fill">
-										<div class="self-stretch p-5">
-											<div class="flex justify-between items-center self-stretch">
-												<span class="text-zinc-900 text-base font-bold" >
+
+								<!-- Card 2 -->
+								<div class="column6">
+									<div class="column12">
+										<img
+											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/4ckgtska_expires_30_days.png" 
+											class="img_evento"
+										/>
+										<div class="column8">
+											<div class="row-view6">
+												<span class="text5" >
 													Salão Real Tijuca
 												</span>
-												<span class="text-zinc-900 text-sm font-bold" >
+												<span class="text" >
 													R$ 1.400
 												</span>
 											</div>
-											<div class="flex items-center self-stretch pt-3">
-												<div class="bg-white w-[179px] p-[9px] mr-2 rounded-lg border border-solid border-zinc-200">
-													<div class="flex flex-col items-center self-stretch">
-														<span class="text-[#71717B] text-[11px]" >
+											<div class="row-view9">
+												<div class="column13">
+													<div class="view5">
+														<span class="text6" >
 															Capacidade
 														</span>
 													</div>
-													<div class="flex flex-col items-center self-stretch">
-														<span class="text-zinc-900 text-[11px] font-bold" >
+													<div class="view5">
+														<span class="text7" >
 															60 p.
 														</span>
 													</div>
 												</div>
-												<div class="bg-white w-[179px] p-[9px] mr-[9px] rounded-lg border border-solid border-zinc-200">
-													<div class="flex flex-col items-center self-stretch">
-														<span class="text-[#71717B] text-[11px]" >
+												<div class="column14">
+													<div class="view5">
+														<span class="text6" >
 															Mesas Máx
 														</span>
 													</div>
-													<div class="flex flex-col items-center self-stretch">
-														<span class="text-zinc-900 text-[11px] font-bold" >
+													<div class="view5">
+														<span class="text7" >
 															10 mes.
 														</span>
 													</div>
 												</div>
-												<div class="bg-white w-[179px] p-[9px] rounded-lg border border-solid border-zinc-200">
-													<div class="flex flex-col items-center self-stretch">
-														<span class="text-[#71717B] text-[11px]" >
+												<div class="column9">
+													<div class="view5">
+														<span class="text6" >
 															Cadeiras Máx
 														</span>
 													</div>
-													<div class="flex flex-col items-center self-stretch">
-														<span class="text-zinc-900 text-[11px] font-bold" >
+													<div class="view5">
+														<span class="text7" >
 															50 cad.
 														</span>
 													</div>
 												</div>
 											</div>
-											<div class="flex items-start self-stretch pt-3 gap-1">
-												<div class="flex flex-col shrink-0 items-start bg-white py-[3px] px-[9px] rounded border border-solid border-zinc-200">
-													<span class="text-[#3F3F47] text-[10px]" >
+											<div class="row-view10">
+												<div class="view11">
+													<span class="text8" >
 														✓ Som Integrado
 													</span>
 												</div>
-												<div class="flex flex-col shrink-0 items-start bg-white py-[3px] px-[9px] rounded border border-solid border-zinc-200">
-													<span class="text-[#3F3F47] text-[10px]" >
+												<div class="view11">
+													<span class="text8" >
 														✓ Pista de Dança
 													</span>
 												</div>
-												<div class="flex flex-col shrink-0 items-start bg-white py-[3px] px-[9px] rounded border border-solid border-zinc-200">
-													<span class="text-[#3F3F47] text-[10px]" >
+												<div class="view11">
+													<span class="text8" >
 														✓ Cozinha com Freezer
 													</span>
 												</div>
-												<div class="flex flex-col shrink-0 items-start bg-white py-[3px] px-[9px] rounded border border-solid border-zinc-200">
-													<span class="text-[#3F3F47] text-[10px]" >
+												<div class="view11">
+													<span class="text8" >
 														✓ Acessibilidade
 													</span>
 												</div>
 											</div>
 										</div>
 									</div>
-									<button class="flex justify-center items-center self-stretch bg-zinc-900 text-left py-2.5 mb-5 mx-5 gap-2.5 rounded-xl border-0" style="box-shadow: 0px 1px 2px #0000001A;">
-										<span class="text-white text-xs font-bold" >
+									<button class="button-row-view"
+										>
+										<span class="text2" >
 											Selecionar este local e criar Festa
 										</span>
-										<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/abjq16r3_expires_30_days.png" class="w-4 h-4 rounded-xl object-fill">
+										<img
+											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/76w00ff5_expires_30_days.png" 
+											class="image6"
+										/>
 									</button>
 								</div>
+
+								<!-- Card 3 -->
+								<div class="column6">
+									<div class="column7">
+										<img
+											src="img/evento3.jpeg" 
+											class="img_evento"
+										/>
+										<div class="column8">
+											<div class="row-view6">
+												<span class="text5" >
+													Chácara Sol &amp; Festa Botafogo
+												</span>
+												<span class="text" >
+													R$ 1.200
+												</span>
+											</div>
+											<div class="row-view7">
+												<div class="column9">
+													<div class="view5">
+														<span class="text6" >
+															Capacidade
+														</span>
+													</div>
+													<div class="view5">
+														<span class="text7" >
+															100 pessoas
+														</span>
+													</div>
+												</div>
+												<div class="column9">
+													<div class="view5">
+														<span class="text6" >
+															Mesas Máx
+														</span>
+													</div>
+													<div class="view5">
+														<span class="text7" >
+															15 mesas
+														</span>
+													</div>
+												</div>
+												<div class="column9">
+													<div class="view5">
+														<span class="text6" >
+															Cadeiras (Máximo)
+														</span>
+													</div>
+													<div class="view5">
+														<span class="text7" >
+															80 cadeiras
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="column10">
+												<div class="row-view8">
+													<div class="view6">
+														<div class="column7">
+															<div class="view7">
+																<span class="text8" >
+																	✓ Piscina
+																</span>
+															</div>
+															<div class="view8">
+																<div class="column11">
+																	<div class="view9">
+																		<span class="text8" >
+																			✓ Churrasqueira Goumert
+																		</span>
+																	</div>
+																	<div class="absolute-view">
+																		<span class="text8" >
+																			✓ Ar Condicionado
+																		</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="view10">
+														<span class="text8" >
+															✓ Cozinha Industrial
+														</span>
+													</div>
+												</div>
+												<div class="view7">
+													<span class="text8" >
+														✓ Estacionamento (15 vagas)
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<button class="button-row-view"
+										>
+										<span class="text2" >
+											Selecionar este local e criar Festa
+										</span>
+										<img
+											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/1iymblr9_expires_30_days.png" 
+											class="image6"
+										/>
+									</button>
+								</div>
+
 							</div>
 						</div>
 					</div>
-					
-					<div class="flex flex-col bg-neutral-50 w-[597px] absolute bottom-[-51px] left-0 pt-[1px] rounded-2xl border border-solid border-zinc-200" style="box-shadow: 0px 1px 2px #0000001A">
-						<div class="flex flex-col items-start self-stretch mx-[1px]">
-							<img src="img/evento3.jpeg" class="w-[595px] h-44 object-fill">
-							<div class="self-stretch p-5">
-								<div class="flex justify-between items-center self-stretch">
-									<span class="text-zinc-900 text-base font-bold" >
+
+
+					<div class="absolute-column">
+						<!-- <div class="column15">
+							<img
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/o6e89t3k_expires_30_days.png" 
+								class="img_evento"
+							/>
+							<div class="column8">
+								<div class="row-view6">
+									<span class="text5" >
 										Chácara Sol &amp; Festa Botafogo
 									</span>
-									<span class="text-zinc-900 text-sm font-bold" >
+									<span class="text" >
 										R$ 1.200
 									</span>
 								</div>
-								<div class="flex items-center self-stretch pt-3 gap-[9px]">
-									<div class="bg-white w-[179px] p-[9px] rounded-lg border border-solid border-zinc-200">
-										<div class="flex flex-col items-center self-stretch">
-											<span class="text-[#71717B] text-[11px]" >
+								<div class="row-view7">
+									<div class="column9">
+										<div class="view5">
+											<span class="text6" >
 												Capacidade
 											</span>
 										</div>
-										<div class="flex flex-col items-center self-stretch">
-											<span class="text-zinc-900 text-[11px] font-bold" >
+										<div class="view5">
+											<span class="text7" >
 												120 p.
 											</span>
 										</div>
 									</div>
-									<div class="bg-white w-[179px] p-[9px] rounded-lg border border-solid border-zinc-200">
-										<div class="flex flex-col items-center self-stretch">
-											<span class="text-[#71717B] text-[11px]" >
+									<div class="column9">
+										<div class="view5">
+											<span class="text6" >
 												Mesas Máx
 											</span>
 										</div>
-										<div class="flex flex-col items-center self-stretch">
-											<span class="text-zinc-900 text-[11px] font-bold" >
+										<div class="view5">
+											<span class="text7" >
 												20 mes.
 											</span>
 										</div>
 									</div>
-									<div class="bg-white w-[179px] p-[9px] rounded-lg border border-solid border-zinc-200">
-										<div class="flex flex-col items-center self-stretch">
-											<span class="text-[#71717B] text-[11px]" >
+									<div class="column9">
+										<div class="view5">
+											<span class="text6" >
 												Cadeiras Máx
 											</span>
 										</div>
-										<div class="flex flex-col items-center self-stretch">
-											<span class="text-zinc-900 text-[11px] font-bold" >
+										<div class="view5">
+											<span class="text7" >
 												100 cad.
 											</span>
 										</div>
 									</div>
 								</div>
-								<div class="flex items-start self-stretch pt-3 gap-1">
-									<div class="flex flex-col shrink-0 items-start bg-white py-[3px] px-[9px] rounded border border-solid border-zinc-200">
-										<span class="text-[#3F3F47] text-[10px]" >
+								<div class="row-view10">
+									<div class="view11">
+										<span class="text8" >
 											✓ Área Verde Externa
 										</span>
 									</div>
-									<div class="flex flex-col shrink-0 items-start bg-white py-[3px] px-[9px] rounded border border-solid border-zinc-200">
-										<span class="text-[#3F3F47] text-[10px]" >
+									<div class="view11">
+										<span class="text8" >
 											✓ Churrasqueira
 										</span>
 									</div>
-									<div class="flex flex-col shrink-0 items-start bg-white py-[3px] px-[9px] rounded border border-solid border-zinc-200">
-										<span class="text-[#3F3F47] text-[10px]" >
+									<div class="view11">
+										<span class="text8" >
 											✓ Gerador Próprio
 										</span>
 									</div>
-									<div class="flex flex-col shrink-0 items-start bg-white py-[3px] px-[9px] rounded border border-solid border-zinc-200">
-										<span class="text-[#3F3F47] text-[10px]" >
+									<div class="view11">
+										<span class="text8" >
 											✓ Espaço Kids
 										</span>
 									</div>
-									<div class="flex flex-col shrink-0 items-start bg-white py-[3px] px-[9px] rounded border border-solid border-zinc-200">
-										<span class="text-[#3F3F47] text-[10px]" >
+									<div class="view11">
+										<span class="text8" >
 											✓ Iluminação Cênica
 										</span>
 									</div>
 								</div>
 							</div>
 						</div>
-						<button class="flex justify-center items-center self-stretch bg-zinc-900 text-left py-2.5 mb-[21px] mx-[21px] gap-2.5 rounded-xl border-0" style="box-shadow: 0px 1px 2px #0000001A;">
-							<span class="text-white text-xs font-bold">
+						<button class="button-row-view2"
+							>
+							<span class="text2" >
 								Selecionar este local e criar Festa
 							</span>
-							<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/abjq16r3_expires_30_days.png" class="w-4 h-4 rounded-xl object-fill">
+							<img
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/jaqkuda5_expires_30_days.png" 
+								class="image6"
+							/>
 						</button>
-					</div>
-				</div>
-				<span class="text-black text-xs font-bold" >
-					© 2026 Let's Party. Todos os direitos reservados.
-				</span>
+					</div> -->
+				</main>
+				<footer>
+					<span class="text-footer">
+						© 2026 Let’s Party. Todos os direitos reservados.
+					</span>
+				</footer>
 			</div>
 		</div>
 	</div>
 </body>
-</html>
+</html> 

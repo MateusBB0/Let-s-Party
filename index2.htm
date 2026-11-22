@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Let's Party - Pesquisar Espaço</title>
+	<style>
+		/* Estilos Base */
+		body {
+			font-family: system-ui, -apple-system, sans-serif;
+			background: #FFFFFF;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+		}
+		.container {
+			width: 100%;
+			max-width: 900px;
+			padding: 0 20px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		/* Cabeçalho e Navegação */
+		.header-nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 16px 0;
+			margin-bottom: 32px;
+			border-bottom: 1px solid #E4E4E7;
+		}
+		.logo-area {
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			font-size: 14px;
+			font-weight: bold;
+			color: #18181B;
+		}
+		.logo-img { border-radius: 70px; width: 101px; height: 56px; object-fit: cover; }
+		.profile-icon { width: 40px; height: 56px; object-fit: contain; }
+
+		/* Barra de Progresso (Passos) */
+		.steps-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 12px;
+			padding: 16px;
+			background: #FFFFFF;
+			border-radius: 12px;
+			border: 1px solid #E4E4E7;
+			margin-bottom: 24px;
+			flex-wrap: wrap;
+		}
+		.step-btn {
+			display: flex;
+			align-items: center;
+			border-radius: 8px;
+			padding: 8px 14px;
+			border: 1px solid #E4E4E7;
+			background: #FFFFFF;
+			color: #18181B;
+			font-size: 12px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		.step-btn.active {
+			background: #18181B;
+			color: #FFFFFF;
+			border-color: #18181B;
+			box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+		}
+		.step-icon { border-radius: 12px; width: 14px; height: 14px; }
+
+		/* Caixa de Busca */
+		.search-box {
+			background: #FAFAFA;
+			border-radius: 16px;
+			border: 1px solid #E4E4E7;
+			padding: 24px;
+			margin-bottom: 32px;
+			box-shadow: 0px 1px 2px rgba(0,0,0,0.05);
+		}
+		.search-label { color: #3F3F47; font-size: 12px; margin-bottom: 8px; display: block; }
+		.search-input {
+			width: 100%;
+			box-sizing: border-box;
+			background: #FAFAFA;
+			border-radius: 8px;
+			border: 1px solid #D4D4D8;
+			padding: 12px 16px;
+			color: #18181B;
+			font-size: 12px;
+		}
+
+		/* Grid de Locais */
+		.cards-grid {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 32px;
+			padding-bottom: 60px;
+		}
+		.card-local {
+			background: #FAFAFA;
+			border-radius: 16px;
+			border: 1px solid #E4E4E7;
+			width: 100%;
+			max-width: 600px;
+			display: flex;
+			flex-direction: column;
+			box-shadow: 0px 1px 2px rgba(0,0,0,0.05);
+			overflow: hidden;
+		}
+		.card-img { width: 100%; height: 176px; object-fit: cover; }
+		.card-content { padding: 20px; display: flex; flex-direction: column; gap: 16px; }
+		
+		/* Títulos e Preços */
+		.card-header { display: flex; justify-content: space-between; align-items: center; }
+		.titulo-espaco { color: #18181B; font-size: 16px; font-weight: bold; }
+		.preco-espaco { color: #18181B; font-size: 14px; font-weight: bold; }
+		
+		/* Caixas de Informação (Capacidade) */
+		.info-row { display: flex; gap: 8px; justify-content: space-between; }
+		.caixa-info {
+			flex: 1;
+			background: #FFFFFF;
+			border-radius: 8px;
+			border: 1px solid #E4E4E7;
+			padding: 12px 8px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+		.texto-label { color: #71717B; font-size: 11px; margin-bottom: 4px; }
+		.texto-valor { color: #18181B; font-size: 12px; font-weight: bold; }
+
+		/* Comodidades */
+		.comodidades-list { display: flex; flex-wrap: wrap; gap: 8px; }
+		.badge-comodidade {
+			background: #FFFFFF;
+			border-radius: 4px;
+			border: 1px solid #E4E4E7;
+			padding: 4px 8px;
+			color: #3F3F47;
+			font-size: 11px;
+		}
+
+		/* Botão de Selecionar */
+		.btn-selecionar {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #18181B;
+			color: #FFFFFF;
+			border-radius: 12px;
+			border: none;
+			padding: 14px;
+			margin: 0 20px 20px 20px;
+			gap: 10px;
+			box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+			cursor: pointer;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		
+		/* Rodapé */
+		footer { display: flex; justify-content: center; padding: 20px 0 40px 0; }
+		.text-footer { color: #000000; font-size: 12px; font-weight: bold; }
+	</style>
+</head>
+<body>
+	<div class="container">
+		
+		<!-- Cabeçalho -->
+		<header class="header-nav">
+			<div class="logo-area">
+				<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/nf8slqz4_expires_30_days.png" class="logo-img" alt="Logo">
+				<span>Let’s Party</span>
+			</div>
+			<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/0a3fwu2t_expires_30_days.png" class="profile-icon" alt="Menu/Perfil">
+		</header>
+
+		<main>
+			<!-- Barra de Passos -->
+			<div class="steps-container">
+				<button class="step-btn active">1. Local</button>
+				<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/fmincxkt_expires_30_days.png" class="step-icon">
+				<button class="step-btn">2. Configurar Festa</button>
+				<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/qkb6jyvr_expires_30_days.png" class="step-icon">
+				<button class="step-btn">3. Resumo</button>
+				<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/bkuwe3r6_expires_30_days.png" class="step-icon">
+				<button class="step-btn">4. Confirmação</button>
+			</div>
+
+			<!-- Busca -->
+			<div class="search-box">
+				<label class="search-label">Buscar por Bairro ou Nome:</label>
+				<input type="text" placeholder="Ex: Tijuca, Barra, Botafogo..." class="search-input">
+			</div>
+
+			<!-- Grid de Locais -->
+			<div class="cards-grid">
+				
+				<!-- Card 1 -->
+				<div class="card-local">
+					<img src="img/evento1.jpeg" class="card-img" alt="Espaço Jardim da Barra">
+					<div class="card-content">
+						<div class="card-header">
+							<span class="titulo-espaco">Espaço Jardim da Barra</span>
+							<span class="preco-espaco">R$ 2.500</span>
+						</div>
+						<div class="info-row">
+							<div class="caixa-info">
+								<span class="texto-label">Capacidade</span>
+								<span class="texto-valor">100 p.</span>
+							</div>
+							<div class="caixa-info">
+								<span class="texto-label">Mesas Máx</span>
+								<span class="texto-valor">15 mes.</span>
+							</div>
+							<div class="caixa-info">
+								<span class="texto-label">Cadeiras Máx</span>
+								<span class="texto-valor">80 cad.</span>
+							</div>
+						</div>
+						<div class="comodidades-list">
+							<span class="badge-comodidade">✓ Piscina</span>
+							<span class="badge-comodidade">✓ Churrasqueira Gourmet</span>
+							<span class="badge-comodidade">✓ Ar Condicionado</span>
+							<span class="badge-comodidade">✓ Cozinha Industrial</span>
+							<span class="badge-comodidade">✓ Estacionamento (15 vagas)</span>
+						</div>
+					</div>
+					<button class="btn-selecionar" onclick="alert('Pressed!')">
+						Selecionar este local e criar Festa
+						<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/1iymblr9_expires_30_days.png" class="step-icon">
+					</button>
+				</div>
+
+				<!-- Card 2 -->
+				<div class="card-local">
+					<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/4ckgtska_expires_30_days.png" class="card-img" alt="Salão Real Tijuca">
+					<div class="card-content">
+						<div class="card-header">
+							<span class="titulo-espaco">Salão Real Tijuca</span>
+							<span class="preco-espaco">R$ 1.400</span>
+						</div>
+						<div class="info-row">
+							<div class="caixa-info">
+								<span class="texto-label">Capacidade</span>
+								<span class="texto-valor">60 p.</span>
+							</div>
+							<div class="caixa-info">
+								<span class="texto-label">Mesas Máx</span>
+								<span class="texto-valor">10 mes.</span>
+							</div>
+							<div class="caixa-info">
+								<span class="texto-label">Cadeiras Máx</span>
+								<span class="texto-valor">50 cad.</span>
+							</div>
+						</div>
+						<div class="comodidades-list">
+							<span class="badge-comodidade">✓ Som Integrado</span>
+							<span class="badge-comodidade">✓ Pista de Dança</span>
+							<span class="badge-comodidade">✓ Cozinha com Freezer</span>
+							<span class="badge-comodidade">✓ Acessibilidade</span>
+						</div>
+					</div>
+					<button class="btn-selecionar" onclick="alert('Pressed!')">
+						Selecionar este local e criar Festa
+						<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/76w00ff5_expires_30_days.png" class="step-icon">
+					</button>
+				</div>
+
+				<!-- Card 3 -->
+				<div class="card-local">
+					<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/o6e89t3k_expires_30_days.png" class="card-img" alt="Chácara Sol & Festa Botafogo">
+					<div class="card-content">
+						<div class="card-header">
+							<span class="titulo-espaco">Chácara Sol & Festa Botafogo</span>
+							<span class="preco-espaco">R$ 1.200</span>
+						</div>
+						<div class="info-row">
+							<div class="caixa-info">
+								<span class="texto-label">Capacidade</span>
+								<span class="texto-valor">120 p.</span>
+							</div>
+							<div class="caixa-info">
+								<span class="texto-label">Mesas Máx</span>
+								<span class="texto-valor">20 mes.</span>
+							</div>
+							<div class="caixa-info">
+								<span class="texto-label">Cadeiras Máx</span>
+								<span class="texto-valor">100 cad.</span>
+							</div>
+						</div>
+						<div class="comodidades-list">
+							<span class="badge-comodidade">✓ Área Verde Externa</span>
+							<span class="badge-comodidade">✓ Churrasqueira</span>
+							<span class="badge-comodidade">✓ Gerador Próprio</span>
+							<span class="badge-comodidade">✓ Espaço Kids</span>
+							<span class="badge-comodidade">✓ Iluminação Cênica</span>
+						</div>
+					</div>
+					<button class="btn-selecionar" onclick="alert('Pressed!')">
+						Selecionar este local e criar Festa
+						<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/jaqkuda5_expires_30_days.png" class="step-icon">
+					</button>
+				</div>
+
+			</div>
+		</main>
+
+		<!-- Rodapé -->
+		<footer>
+			<span class="text-footer">© 2026 Let’s Party. Todos os direitos reservados.</span>
+		</footer>
+
+	</div>
+</body>
+</html>
