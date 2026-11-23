@@ -1,460 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Funcionalidade2Finalizar</title>
-	<style>
-		body {
-			font-family: system-ui;
-		}
-		.absolute-box {
-			position: absolute;
-			top: 8px;
-			right: 0px;
-			left: 0px;
-			height: 70px;
-			align-self: stretch;
-		}
-		.absolute-view {
-			position: absolute;
-			top: 55px;
-			right: 0px;
-			left: 0px;
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-		.button {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #18181B;
-			border-radius: 37282700px;
-			border: none;
-			padding: 12px 7px;
-			margin-left: 15px;
-			text-align: left;
-		}
-		.button2 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #18181B;
-			border-radius: 8px;
-			border: 1px solid #18181B;
-			padding: 8px 14px;
-			box-shadow: 0px 1px 3px #0000001A;
-			text-align: left;
-		}
-		.button3 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #FFFFFF;
-			border-radius: 8px;
-			border: 1px solid #E4E4E7;
-			padding: 8px 14px;
-			text-align: left;
-		}
-		.button4 {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #00CF06;
-			border-radius: 12px;
-			border: none;
-			padding: 10px 44px;
-			margin-bottom: 33px;
-			box-shadow: 0px 1px 2px #0000001A;
-			text-align: left;
-		}
-		.button-row-view {
-			flex-shrink: 0;
-			display: flex;
-			align-items: center;
-			background: #FFFFFF;
-			border-radius: 8px;
-			border: 1px solid #E4E4E7;
-			padding: 8px 14px;
-			gap: 8px;
-			text-align: left;
-		}
-		.column {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding-bottom: 36px;
-		}
-		.column2 {
-			align-self: stretch;
-			background: #FFFFFF;
-			padding-top: 68px;
-			padding-left: 124px;
-			padding-right: 124px;
-			margin-bottom: 36px;
-			position: relative;
-		}
-		.column3 {
-			width: 671px;
-			box-sizing: border-box;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			background: #FAFAFA;
-			border-radius: 16px;
-			border: 1px solid #E4E4E7;
-			padding-top: 33px;
-			box-shadow: 0px 1px 2px #0000001A;
-		}
-		.column4 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			margin-bottom: 15px;
-			margin-left: 33px;
-			margin-right: 33px;
-			position: relative;
-		}
-		.column5 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			background: #FFFFFF;
-			border-radius: 12px;
-			border: 1px solid #E4E4E7;
-			padding-top: 11px;
-			padding-bottom: 11px;
-			margin-bottom: 36px;
-			margin-left: 33px;
-			margin-right: 33px;
-			gap: 29px;
-		}
-		.column6 {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		.contain {
-			display: flex;
-			flex-direction: column;
-			background: #FFFFFF;
-		}
-		.image {
-			border-radius: 70px;
-			width: 101px;
-			height: 56px;
-			object-fit: fill;
-		}
-		.image2 {
-			width: 40px;
-			height: 56px;
-			object-fit: fill;
-		}
-		.image3 {
-			border-radius: 10px;
-			width: 30px;
-			height: 30px;
-			margin-right: 4px;
-			object-fit: fill;
-		}
-		.image4 {
-			border-radius: 8px;
-			width: 14px;
-			height: 14px;
-			object-fit: fill;
-		}
-		.image5 {
-			border-radius: 12px;
-			width: 14px;
-			height: 14px;
-			object-fit: fill;
-		}
-		.image6 {
-			border-radius: 16px;
-			width: 605px;
-			height: 122px;
-			object-fit: fill;
-		}
-		.image7 {
-			width: 14px;
-			height: 14px;
-			object-fit: fill;
-		}
-		.row-view {
-			align-self: stretch;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			background: #FFFFFF;
-			padding-bottom: 1px;
-			padding-left: 16px;
-			padding-right: 16px;
-			box-shadow: 0px 1px 2px #0000001A;
-		}
-		.row-view2 {
-			flex-shrink: 0;
-			display: flex;
-			align-items: center;
-			padding-left: 9px;
-			padding-right: 9px;
-			gap: 15px;
-		}
-		.row-view3 {
-			flex-shrink: 0;
-			display: flex;
-			align-items: center;
-			border-radius: 10px;
-			border: 1px solid #E4E4E7;
-			padding-top: 5px;
-			padding-bottom: 5px;
-		}
-		.row-view4 {
-			display: flex;
-			align-items: center;
-			background: #FFFFFF;
-			border-radius: 12px;
-			border: 1px solid #E4E4E7;
-			padding: 13px 620px 13px 6px;
-			gap: 8px;
-		}
-		.row-view5 {
-			display: flex;
-			align-items: center;
-			gap: 9px;
-		}
-		.row-view6 {
-			display: flex;
-			align-items: center;
-			margin-bottom: 20px;
-		}
-		.text {
-			color: #18181B;
-			font-size: 14px;
-			font-weight: bold;
-		}
-		.text2 {
-			color: #FFFFFF;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text3 {
-			color: #52525C;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text4 {
-			color: #18181B;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text5 {
-			color: #18181B;
-			font-size: 36px;
-			font-weight: bold;
-			margin-bottom: 27px;
-		}
-		.text6 {
-			color: #3F3F47;
-			font-size: 24px;
-		}
-		.text7 {
-			color: #18181B;
-			font-size: 24px;
-			font-weight: bold;
-		}
-		.text8 {
-			color: #18181B;
-			font-size: 24px;
-			font-weight: bold;
-			margin-left: 53px;
-		}
-		.text9 {
-			color: #52525C;
-			font-size: 12px;
-		}
-		.text10 {
-			color: #000000;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.view {
-			overflow: hidden;
-			align-self: stretch;
-			background: #FFFFFF;
-		}
-		.view2 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			padding-left: 14px;
-			padding-right: 14px;
-		}
-		.view3 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding-top: 157px;
-			padding-bottom: 13px;
-			padding-left: 35px;
-			margin-bottom: 183px;
-		}
-		.view4 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-	</style>
+	<title>Resumo - Let's Party</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-		<div class="contain">
-		<div class="view">
-			<div class="column">
-				<div class="row-view">
-					<img
-						src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/hp5w339t_expires_30_days.png" 
-						class="image"
-					/>
-					<div class="view2">
-						<span class="text" >
-							Let’s Party
-						</span>
-					</div>
-					<div class="row-view2">
-						<img
-							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/mm6zsir6_expires_30_days.png" 
-							class="image2"
-						/>
-						<div class="row-view3">
-							<button class="button"
-								onclick="alert('Pressed!')"}>
-								<span class="text2" >
-									User
-								</span>
-							</button>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/u82x7jn3_expires_30_days.png" 
-								class="image3"
-							/>
-						</div>
-					</div>
-				</div>
-				<div class="column2">
-					<div class="absolute-view">
-						<div class="row-view4">
-							<button class="button-row-view"
-								onclick="alert('Pressed!')"}>
-								<img
-									src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/xm4agqks_expires_30_days.png" 
-									class="image4"
-								/>
-								<span class="text3" >
-									1. Local
-								</span>
-							</button>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/mnr4i74u_expires_30_days.png" 
-								class="image5"
-							/>
-							<button class="button-row-view"
-								onclick="alert('Pressed!')"}>
-								<img
-									src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/ryv8zxgl_expires_30_days.png" 
-									class="image4"
-								/>
-								<span class="text3" >
-									2. Configurar Festa
-								</span>
-							</button>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/8zdvzjfv_expires_30_days.png" 
-								class="image5"
-							/>
-							<button class="button2"
-								onclick="alert('Pressed!')"}>
-								<span class="text2" >
-									3. Resumo
-								</span>
-							</button>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/piai9zyx_expires_30_days.png" 
-								class="image5"
-							/>
-							<button class="button3"
-								onclick="alert('Pressed!')"}>
-								<span class="text4" >
-									4. Confirmação
-								</span>
-							</button>
-						</div>
-					</div>
-					<div class="view3">
-						<div class="column3">
-							<div class="column4">
-								<img
-									src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/gc8cu23u_expires_30_days.png" 
-									class="image6"
-								/>
-								<div class="absolute-box">
-								</div>
-							</div>
-							<span class="text5" >
-								Festa Configurada sem Conflitos!
-							</span>
-							<div class="column5">
-								<span class="text6" >
-									Local: Espaço Jardim da Barra (Barra da Tijuca)
-								</span>
-								<div class="row-view5">
-									<span class="text7" >
-										Valor Total: R$
-									</span>
-									<div class="view4">
-										<div class="column6">
-											<span class="text7" >
-												2500
-											</span>
-											<span class="text8" >
-												,00
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<button class="button4"
-								onclick="alert('Pressed!')"}>
-								<span class="text2" >
-									FINALIZAR
-								</span>
-							</button>
-							<div class="row-view6">
-								<img
-									src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/7tq2cr2g_expires_30_days.png" 
-									class="image7"
-								/>
-								<span class="text9" >
-									Voltar
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
+
+<!-- Cabeçalho -->
+<header>
+	<nav>
+		<div class="organizar_navbar">
+			<a href="index.html">
+				<img src="img/logo.jpg" class="logo" alt="Let's Party">
+			</a>
+			<span class="texto_preto_negrito">Let’s Party</span>
+			<img src="img/config.png" class="img_config" alt="Configurações">
+		</div>
+	</nav>
+</header>
+
+
+<div style="padding: 34px 124px 24px 124px; gap:32px;">
+	<!-- Barra de Progresso -->
+	<div class="container_caminho">
+		<div class="caminho_inativo">
+			<span class="texto_caminho_inativo">1. Local</span>
+		</div>
+		<img src="img/seta.png" class="seta_img" alt="Seta">
+		<div class="caminho_inativo">
+			<span class="texto_caminho_inativo">2. Configurar Festa</span>
+		</div>
+		<img src="img/seta.png" class="seta_img" alt="Seta">
+		<div class="caminho_ativo">
+			<span class="textos_brancos">3. Resumo</span>
+		</div>
+		<img src="img/seta.png" class="seta_img" alt="Seta">
+		<div class="caminho_inativo">
+			<span class="texto_caminho_inativo">4. Confirmação</span>
+		</div>
+	</div>
+
+	<!-- Conteúdo principal -->
+	<main class="layout_centralizado">
+
+	<!-- Resumo -->
+	<section class="card card_resumo_final">
+		<img src="img/logo.jpg" class="img_festa_resumo" alt="Imagem da Festa">
+		
+		<h1 class="titulo_sucesso">Festa Configurada sem Conflitos!</h1>
+		
+		<div class="caixa_informacoes_finais">
+			<span class="texto_cinza_escuro texto_medio">Local: Espaço Jardim da Barra (Barra da Tijuca)</span>
+			<div class="linha_valor_total">
+				<span class="texto_preto_negrito texto_grande">Valor Total: R$ 2500,00</span>
+			</div>
+		</div>
+
+		<a href="Confirmacao.html" class="btn_finalizar">
+			FINALIZAR
+		</a>
+
+		<a href="Evento.html" class="link_voltar" style="text-decoration: none;">
+			<img src="img/setinha.png" width="16px" height="16px"   alt="Voltar">
+			<span class="texto_cinza">Voltar</span>
+		</a>
+	</section>
+
+</main>
+</div>
 <!-- Rodapé -->
 <footer>
 	<span class="text-footer"> © 2026 Let’s Party. Todos os direitos reservados. </span>
 </footer>
-			</div>
-		</div>
-	</div>
+
 </body>
 </html>

@@ -1,672 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Funcionalidade2ReservaConfirmada</title>
-	<style>
-		body {
-			font-family: system-ui;
-		}
-		.box {
-			height: 1px;
-			align-self: stretch;
-			background: #E4E4E7;
-			margin-bottom: 22px;
-		}
-		.box2 {
-			flex: 1;
-			align-self: stretch;
-		}
-		.box3 {
-			height: 1px;
-			align-self: stretch;
-			background: #E4E4E7;
-			margin-bottom: 12px;
-		}
-		.box4 {
-			height: 40px;
-			align-self: stretch;
-		}
-		.button {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #18181B;
-			border-radius: 37282700px;
-			border: none;
-			padding: 12px 7px;
-			margin-left: 15px;
-			text-align: left;
-		}
-		.button2 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #18181B;
-			border-radius: 8px;
-			border: 1px solid #18181B;
-			padding: 8px 14px;
-			box-shadow: 0px 1px 3px #0000001A;
-			text-align: left;
-		}
-		.button3 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #00CF06;
-			border-radius: 16777200px;
-			border: none;
-			padding: 10px 18px;
-			text-align: left;
-		}
-		.button-row-view {
-			flex-shrink: 0;
-			display: flex;
-			align-items: center;
-			background: #FFFFFF;
-			border-radius: 8px;
-			border: 1px solid #E4E4E7;
-			padding: 8px 14px;
-			gap: 8px;
-			text-align: left;
-		}
-		.column {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding-bottom: 31px;
-		}
-		.column2 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin-bottom: 256px;
-			margin-left: 124px;
-			margin-right: 124px;
-			gap: 28px;
-		}
-		.column3 {
-			width: 820px;
-			box-sizing: border-box;
-			background: #FAFAFA;
-			border-radius: 16px;
-			border: 1px solid #E4E4E7;
-			padding-top: 32px;
-			padding-left: 32px;
-			padding-right: 32px;
-			box-shadow: 0px 1px 2px #0000000F;
-		}
-		.column4 {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 5px;
-		}
-		.column5 {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			margin-right: 76px;
-			gap: 18px;
-		}
-		.column6 {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 3px;
-		}
-		.column7 {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			padding-bottom: 5px;
-		}
-		.column8 {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-		.column9 {
-			width: 282px;
-			box-sizing: border-box;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #FFFFFF;
-			border-radius: 12px;
-			border: 1px solid #E4E4E7;
-			padding-top: 18px;
-			padding-left: 18px;
-			padding-right: 18px;
-		}
-		.column10 {
-			width: 122px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			margin-bottom: 59px;
-			gap: 5px;
-		}
-		.column11 {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		.column12 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin-bottom: 63px;
-			gap: 8px;
-		}
-		.contain {
-			display: flex;
-			flex-direction: column;
-			background: #FFFFFF;
-		}
-		.image {
-			border-radius: 70px;
-			width: 101px;
-			height: 56px;
-			object-fit: fill;
-		}
-		.image2 {
-			width: 40px;
-			height: 56px;
-			object-fit: fill;
-		}
-		.image3 {
-			border-radius: 10px;
-			width: 30px;
-			height: 30px;
-			margin-right: 4px;
-			object-fit: fill;
-		}
-		.image4 {
-			border-radius: 8px;
-			width: 14px;
-			height: 14px;
-			object-fit: fill;
-		}
-		.image5 {
-			border-radius: 12px;
-			width: 14px;
-			height: 14px;
-			object-fit: fill;
-		}
-		.image6 {
-			border-radius: 8px;
-			width: 36px;
-			height: 36px;
-			object-fit: fill;
-		}
-		.image7 {
-			width: 14px;
-			height: 14px;
-			object-fit: fill;
-		}
-		.row-view {
-			align-self: stretch;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			background: #FFFFFF;
-			padding-bottom: 1px;
-			padding-left: 16px;
-			padding-right: 16px;
-			margin-bottom: 34px;
-			box-shadow: 0px 1px 2px #0000001A;
-		}
-		.row-view2 {
-			flex-shrink: 0;
-			display: flex;
-			align-items: center;
-			padding-left: 9px;
-			padding-right: 9px;
-			gap: 15px;
-		}
-		.row-view3 {
-			flex-shrink: 0;
-			display: flex;
-			align-items: center;
-			border-radius: 10px;
-			border: 1px solid #E4E4E7;
-			padding-top: 5px;
-			padding-bottom: 5px;
-		}
-		.row-view4 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-			background: #FFFFFF;
-			border-radius: 12px;
-			border: 1px solid #E4E4E7;
-			padding: 13px 6px;
-			gap: 8px;
-		}
-		.row-view5 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-			margin-bottom: 22px;
-			gap: 16px;
-		}
-		.row-view6 {
-			align-self: stretch;
-			display: flex;
-			align-items: flex-start;
-			margin-bottom: 24px;
-		}
-		.row-view7 {
-			align-self: stretch;
-			display: flex;
-			align-items: flex-start;
-			gap: 12px;
-		}
-		.row-view8 {
-			display: flex;
-			align-items: center;
-			gap: 8px;
-		}
-		.row-view9 {
-			align-self: stretch;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-bottom: 12px;
-		}
-		.row-view10 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-			margin-bottom: 12px;
-		}
-		.row-view11 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-			gap: 9px;
-		}
-		.row-view12 {
-			display: flex;
-			align-items: center;
-		}
-		.text {
-			color: #18181B;
-			font-size: 14px;
-			font-weight: bold;
-		}
-		.text2 {
-			color: #FFFFFF;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text3 {
-			color: #52525C;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text4 {
-			color: #FFFFFF;
-			font-size: 30px;
-			font-weight: bold;
-		}
-		.text5 {
-			color: #18181B;
-			font-size: 30px;
-			font-weight: bold;
-		}
-		.text6 {
-			color: #52525C;
-			font-size: 14px;
-		}
-		.text7 {
-			color: #71717B;
-			font-size: 11px;
-		}
-		.text8 {
-			color: #27272A;
-			font-size: 14px;
-			font-weight: bold;
-		}
-		.text9 {
-			color: #71717B;
-			font-size: 12px;
-		}
-		.text10 {
-			color: #000000;
-			font-size: 14px;
-			font-weight: bold;
-		}
-		.text11 {
-			color: #18181B;
-			font-size: 14px;
-			font-weight: bold;
-			margin-bottom: 12px;
-		}
-		.text12 {
-			color: #52525C;
-			font-size: 12px;
-		}
-		.text13 {
-			color: #18181B;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text14 {
-			color: #71717B;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text15 {
-			color: #3F3F47;
-			font-size: 12px;
-		}
-		.text16 {
-			color: #18181B;
-			font-size: 12px;
-			font-weight: bold;
-			margin-right: 7px;
-		}
-		.text17 {
-			color: #27272A;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text18 {
-			color: #18181B;
-			font-size: 22px;
-			font-weight: bold;
-		}
-		.text19 {
-			color: #18181B;
-			font-size: 24px;
-			font-weight: bold;
-		}
-		.text20 {
-			color: #000000;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.view {
-			overflow: hidden;
-			align-self: stretch;
-			background: #FFFFFF;
-		}
-		.view2 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			padding-left: 14px;
-			padding-right: 14px;
-		}
-		.view3 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-		.view4 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-end;
-		}
-	</style>
+	<title>Confirmação - Let's Party</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-		<div class="contain">
-		<div class="view">
-			<div class="column">
-				<div class="row-view">
-					<img
-						src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/r612mvut_expires_30_days.png" 
-						class="image"
-					/>
-					<div class="view2">
-						<span class="text" >
-							Let’s Party
-						</span>
-					</div>
-					<div class="row-view2">
-						<img
-							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/i4gnmgbv_expires_30_days.png" 
-							class="image2"
-						/>
-						<div class="row-view3">
-							<button class="button"
-								onclick="alert('Pressed!')"}>
-								<span class="text2" >
-									User
-								</span>
-							</button>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/i4uk2iuo_expires_30_days.png" 
-								class="image3"
-							/>
-						</div>
-					</div>
-				</div>
-				<div class="column2">
-					<div class="row-view4">
-						<button class="button-row-view"
-							onclick="alert('Pressed!')"}>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/fgy9n6pq_expires_30_days.png" 
-								class="image4"
-							/>
-							<span class="text3" >
-								1. Local
-							</span>
-						</button>
-						<img
-							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/wm8w6mvi_expires_30_days.png" 
-							class="image5"
-						/>
-						<button class="button-row-view"
-							onclick="alert('Pressed!')"}>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/xfvwnbl8_expires_30_days.png" 
-								class="image4"
-							/>
-							<span class="text3" >
-								2. Configurar Festa
-							</span>
-						</button>
-						<img
-							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/4fa4cinj_expires_30_days.png" 
-							class="image5"
-						/>
-						<button class="button-row-view"
-							onclick="alert('Pressed!')"}>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/yi879z62_expires_30_days.png" 
-								class="image4"
-							/>
-							<span class="text3" >
-								3. Resumo
-							</span>
-						</button>
-						<img
-							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/d0dgtcqx_expires_30_days.png" 
-							class="image5"
-						/>
-						<button class="button2"
-							onclick="alert('Pressed!')"}>
-							<span class="text2" >
-								4. Confirmação
-							</span>
-						</button>
-					</div>
-					<div class="column3">
-						<div class="row-view5">
-							<button class="button3"
-								onclick="alert('Pressed!')"}>
-								<span class="text4" >
-									✓
-								</span>
-							</button>
-							<div class="column4">
-								<span class="text5" >
-									Reserva confirmada!
-								</span>
-								<span class="text6" >
-									Sua festa foi concluída com sucesso. Enviamos os detalhes da reserva para o seu e-mail.
-								</span>
-							</div>
-						</div>
-						<div class="box">
-						</div>
-						<div class="row-view6">
-							<div class="column5">
-								<span class="text" >
-									Detalhes do evento
-								</span>
-								<div class="row-view7">
-									<img
-										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/5mkmyy1z_expires_30_days.png" 
-										class="image6"
-									/>
-									<div class="column6">
-										<span class="text7" >
-											Local
-										</span>
-										<span class="text8" >
-											Espaço Jardim da Barra
-										</span>
-										<span class="text9" >
-											Barra da Tijuca
-										</span>
-									</div>
-								</div>
-								<div class="row-view7">
-									<img
-										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/7aay736l_expires_30_days.png" 
-										class="image6"
-									/>
-									<div class="column7">
-										<span class="text7" >
-											Configuração de móveis
-										</span>
-										<div class="row-view8">
-											<div class="view3">
-												<div class="column8">
-													<span class="text10" >
-														5
-													</span>
-													<span class="text10" >
-														60
-													</span>
-												</div>
-											</div>
-											<div class="view3">
-												<div class="column8">
-													<span class="text8" >
-														mesas
-													</span>
-													<span class="text10" >
-														cadeiras
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<span class="text9" >
-									Configuração validada com excelente circulação
-								</span>
-							</div>
-							<div class="column9">
-								<span class="text11" >
-									Resumo do valor
-								</span>
-								<div class="row-view9">
-									<span class="text12" >
-										Aluguel do espaço
-									</span>
-									<span class="text13" >
-										R$ 2.500
-									</span>
-								</div>
-								<div class="row-view9">
-									<span class="text9" >
-										Móveis (   mes /     cad)
-									</span>
-									<span class="text14" >
-										Inclusos
-									</span>
-								</div>
-								<div class="row-view10">
-									<span class="text15" >
-										Serviços Extras (  ):
-									</span>
-									<div class="box2">
-									</div>
-									<span class="text16" >
-										R$
-									</span>
-									<span class="text13" >
-										0
-									</span>
-								</div>
-								<div class="box3">
-								</div>
-								<div class="column10">
-									<span class="text17" >
-										Valor total
-									</span>
-									<div class="row-view11">
-										<span class="text18" >
-											R$
-										</span>
-										<div class="column11">
-											<span class="text19" >
-												2500
-											</span>
-											<div class="view4">
-												<span class="text19" >
-													,00
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column12">
-							<div class="row-view12">
-								<img
-									src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/xrzspfnc_expires_30_days.png" 
-									class="image7"
-								/>
-								<span class="text12" >
-									Voltar ao início
-								</span>
-							</div>
-							<div class="box4">
-							</div>
-						</div>
+
+<!-- Cabeçalho -->
+<header>
+	<nav>
+		<div class="organizar_navbar">
+			<a href="index.html">
+				<img src="img/logo.jpg" class="logo" alt="Let's Party">
+			</a>
+			<span class="texto_preto_negrito">Let’s Party</span>
+			<img src="img/config.png" class="img_config" alt="Configurações">
+		</div>
+	</nav>
+</header>
+
+<div style="display:flex; flex-direction:column ; padding: 34px 124px 24px 124px; gap:28px;">
+	<!-- Barra de Progresso -->
+	<div class="container_caminho">
+		<div class="caminho_inativo">
+			<span class="texto_caminho_inativo">1. Local</span>
+		</div>
+		<img src="img/seta.png" class="seta_img" alt="Seta">
+		<div class="caminho_inativo">
+			<span class="texto_caminho_inativo">2. Configurar Festa</span>
+		</div>
+		<img src="img/seta.png" class="seta_img" alt="Seta">
+		<div class="caminho_inativo">
+			<span class="texto_caminho_inativo">3. Resumo</span>
+		</div>
+		<img src="img/seta.png" class="seta_img" alt="Seta">
+		<div class="caminho_ativo">
+			<span class="textos_brancos">4. Confirmação</span>
+		</div>
+	</div>
+
+<!-- Conteúdo principal -->
+<main class="layout_centralizado">
+
+	<!-- Card Confirmação -->
+	<section class=" card_confirmacao">
+		
+		<!-- Cabeçalho Sucesso -->
+		<div class="cabecalho_sucesso">
+			<div class="icone_check_verde">✓</div>
+			<div class="textos_cabecalho_sucesso">
+				<h1 class="titulo_sucesso_confirmacao">Reserva confirmada!</h1>
+				<p class="texto_cinza">Sua festa foi concluída com sucesso. Enviamos os detalhes da reserva para o seu e-mail.</p>
+			</div>
+		</div>
+
+		<hr class="divisor_resumo" style="margin: 24px 0;">
+
+		<!-- Detalhes  -->
+		<div class="grid_detalhes_confirmacao">
+			
+			<!-- Coluna Esquerda: Informações  -->
+			<div class="coluna_infos_evento">
+				<h2 class="texto_preto_negrito" style="font-size: 16px; margin-bottom: 24px;">Detalhes do evento</h2>
+				
+				<div class="item_detalhe">
+					<img src="img/localizacao.png" class="icone_detalhe" alt="Local">
+					<div class="textos_item_detalhe">
+						<span class="texto_cinza_escuro" style="font-size: 11px;">Local</span>
+						<span class="texto_preto_negrito">Espaço Jardim da Barra</span>
+						<span class="texto_cinza" style="font-size: 11px;">Barra da Tijuca</span>
 					</div>
 				</div>
+
+				<div class="item_detalhe">
+					<img src="img/movel.png" class="icone_detalhe" alt="Móveis">
+					<div class="textos_item_detalhe">
+						<span class="texto_cinza_escuro" style="font-size: 11px;">Configuração de móveis</span>
+						<span class="texto_preto_negrito">5 mesas e 60 cadeiras</span>
+					</div>
+				</div>
+
+				<p class="texto_cinza" style="font-size: 11px; margin-top: 8px;">Configuração validada com excelente circulação</p>
+			</div>
+
+			<!-- Coluna Direita: Resumo -->
+			<div class="card card_resumo">
+				<h3 class="titulo_resumo">Resumo do valor</h3>
+				
+				<div class="linhas_resumo">
+					<div class="linha_resumo">
+						<span class="texto_cinza_escuro">Aluguel do espaço:</span>
+						<span class="texto_preto_negrito">R$ 2.500</span>
+					</div>
+					<div class="linha_resumo">
+						<span class="texto_cinza_escuro">Móveis (5 mes / 60 cad):</span>
+						<span class="badge_incluso">Inclusos</span>
+					</div>
+					<div class="linha_resumo">
+						<span class="texto_cinza_escuro">Serviços Extras ( ):</span>
+						<span class="texto_preto_negrito">R$ 0</span>
+					</div>
+				</div>
+
+				<hr class="divisor_resumo">
+
+				<div class="total_resumo">
+					<span>Valor total:</span>
+					<span class="valor_total">R$ 2500,00</span>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Ação Final -->
+		<div class="acao_final_confirmacao">
+			<a href="index.html" class="link_voltar">
+				<img src="img/setinha.png" class="icone_pequeno" alt="Voltar">
+				<span class="texto_cinza">Voltar ao início</span>
+			</a>
+		</div>
+
+	</section>
+
+</main>
+</div>
 <!-- Rodapé -->
 <footer>
 	<span class="text-footer"> © 2026 Let’s Party. Todos os direitos reservados. </span>
 </footer>
-			</div>
-		</div>
-	</div>
+
 </body>
 </html>

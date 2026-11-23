@@ -1,1002 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Espaço Jardim Barra</title>
-	<style>
-		body {
-			font-family: system-ui;
-		}
-		/* .absolute-column {
-			position: absolute;
-			bottom: 137px;
-			left: 132px;
-			width: 762px;
-			box-sizing: border-box;
-			padding-top: 31px;
-		} */
-		.absolute-column2 {
-			position: absolute;
-			top: 178px;
-			right: 89px;
-			width: 412px;
-			box-sizing: border-box;
-			display: flex;
-			flex-direction: column;
-			background: #FAFAFA;
-			border-radius: 16px;
-			border: 1px solid #E4E4E7;
-			padding: 20px 23px;
-			box-shadow: 0px 1px 2px #0000001A;
-		}
-		.absolute-text {
-			position: absolute;
-			bottom: -10px;
-			left: 0px;
-			color: #18181B;
-			font-size: 14px;
-			font-weight: bold;
-		}
-		.absolute-text2 {
-			position: absolute;
-			bottom: -14px;
-			right: 4px;
-			color: #18181B;
-			font-size: 18px;
-			font-weight: bold;
-		}
-		.box {
-			width: 31px;
-			height: 14px;
-			margin-right: 201px;
-		}
-		.box2 {
-			width: 95px;
-			height: 17px;
-		}
-		.box3 {
-			flex: 1;
-			align-self: stretch;
-		}
-		.box4 {
-			height: 14px;
-			align-self: stretch;
-			margin-bottom: 10px;
-		}
-		.box5 {
-			height: 14px;
-			align-self: stretch;
-		}
-		.button {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #18181B;
-			border-radius: 37282700px;
-			border: none;
-			padding: 12px 7px;
-			margin-left: 15px;
-			text-align: left;
-		}
-		.button2 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #18181B;
-			border-radius: 8px;
-			border: 1px solid #18181B;
-			padding: 8px 14px;
-			box-shadow: 0px 1px 3px #0000001A;
-			text-align: left;
-		}
-		.button3 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #FFFFFF;
-			border-radius: 8px;
-			border: 1px solid #E4E4E7;
-			padding: 8px 14px;
-			text-align: left;
-		}
-		.button4 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			background: #FAFAFA;
-			border-radius: 8px;
-			border: 1px solid #D4D4D8;
-			padding-top: 2px;
-			padding-bottom: 2px;
-			margin-left: 17px;
-			text-align: left;
-		}
-		.button5 {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			background: #FAFAFA;
-			border-radius: 8px;
-			border: 1px solid #D4D4D8;
-			padding-top: 2px;
-			padding-bottom: 2px;
-			margin-right: 8px;
-			text-align: left;
-		}
-		.button6 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #18181B;
-			border-radius: 8px;
-			border: none;
-			padding: 3px 11px;
-			text-align: left;
-		}
-		.button7 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #F4F4F5;
-			border-radius: 8px;
-			border: 1px solid #D4D4D8;
-			padding: 7px 9px;
-			text-align: left;
-		}
-		.button8 {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			background: #FAFAFA;
-			border-radius: 8px;
-			border: 1px solid #D4D4D8;
-			padding-top: 6px;
-			padding-bottom: 6px;
-			text-align: left;
-		}
-		.button9 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #18181B;
-			border-radius: 8px;
-			border: none;
-			padding: 7px;
-			text-align: left;
-		}
-		.button10 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			background: #18181B;
-			border-radius: 12px;
-			border: none;
-			padding-top: 12px;
-			padding-bottom: 12px;
-			box-shadow: 0px 1px 2px #0000001A;
-			text-align: left;
-		}
-		.button-row-view {
-			flex-shrink: 0;
-			display: flex;
-			align-items: center;
-			background: #FFFFFF;
-			border-radius: 8px;
-			border: 1px solid #E4E4E7;
-			padding: 8px 14px;
-			gap: 8px;
-			text-align: left;
-		}
-		.column {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding-bottom: 40px;
-		}
-		.column2 {
-			align-self: stretch;
-			align-items: flex-start;
-			background: #FFFFFF;
-			padding-top: 32px;
-			padding-left: 111px;
-			padding-right: 111px;
-			margin-bottom: 40px;
-			position: relative;
-		}
-		.column3 {
-			align-self: stretch;
-			margin-bottom: 237px;
-		}
-		.column4 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			padding-top: 24px;
-			gap: 24px;
-		}
-		.column5 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			padding-top: 20px;
-			padding-left: 21px;
-		}
-		.column6 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #FFFFFF;
-			border-radius: 12px;
-			border: 1px solid #E4E4E7;
-			padding-top: 17px;
-			padding-bottom: 17px;
-			padding-right: 17px;
-			gap: 12px;
-		}
-		.column7 {
-			flex: 1;
-			background: #FFFFFF;
-			border-radius: 12px;
-			border: 1px solid #E4E4E7;
-			padding: 17px;
-		}
-		.column8 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			padding-bottom: 1px;
-			margin-bottom: 1px;
-			gap: 12px;
-		}
-		.column9 {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #FFFFFF;
-			border-radius: 12px;
-			border: 1px solid #E4E4E7;
-			padding-top: 12px;
-			padding-bottom: 12px;
-			padding-right: 13px;
-			gap: 4px;
-		}
-		.column10 {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #FFFFFF;
-			border-radius: 12px;
-			border: 1px solid #E4E4E7;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			padding-right: 13px;
-			gap: 4px;
-		}
-		.column11 {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			background: #FFFFFF;
-			border-radius: 12px;
-			border: 1px solid #E4E4E7;
-			padding: 13px;
-		}
-		.column12 {
-			flex: 1;
-			background: #FFFFFF;
-			border-radius: 12px;
-			border: 1px solid #E4E4E7;
-			padding: 12px 13px;
-		}
-		.column13 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			margin-bottom: 17px;
-			position: relative;
-		}
-		.column14 {
-			align-self: stretch;
-		}
-		.contain {
-			display: flex;
-			flex-direction: column;
-			background: #FFFFFF;
-		}
-		.image {
-			border-radius: 70px;
-			width: 101px;
-			height: 56px;
-			object-fit: fill;
-		}
-		.image2 {
-			width: 40px;
-			height: 56px;
-			object-fit: fill;
-		}
-		.image3 {
-			border-radius: 10px;
-			width: 30px;
-			height: 30px;
-			margin-right: 4px;
-			object-fit: fill;
-		}
-		.image4 {
-			border-radius: 8px;
-			width: 14px;
-			height: 14px;
-			object-fit: fill;
-		}
-		.image5 {
-			border-radius: 12px;
-			width: 14px;
-			height: 14px;
-			object-fit: fill;
-		}
-		.image6 {
-			width: 16px;
-			height: 16px;
-			object-fit: fill;
-		}
-		.image7 {
-			border-radius: 12px;
-			width: 16px;
-			height: 16px;
-			object-fit: fill;
-		}
-		.row-view {
-			align-self: stretch;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			background: #FFFFFF;
-			padding-bottom: 4px;
-			padding-left: 16px;
-			padding-right: 16px;
-			box-shadow: 0px 1px 2px #0000001A;
-		}
-		.row-view2 {
-			flex-shrink: 0;
-			display: flex;
-			align-items: center;
-			padding-left: 9px;
-			padding-right: 9px;
-			gap: 15px;
-		}
-		.row-view3 {
-			flex-shrink: 0;
-			display: flex;
-			align-items: center;
-			border-radius: 10px;
-			border: 1px solid #E4E4E7;
-			padding-top: 5px;
-			padding-bottom: 5px;
-		}
-		.row-view4 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-			background: #FFFFFF;
-			border-radius: 12px;
-			border: 1px solid #E4E4E7;
-			padding: 13px 6px;
-			margin-right: 26px;
-			gap: 8px;
-		}
-		.row-view5 {
-			align-self: stretch;
-			display: flex;
-			justify-content: space-between;
-			align-items: flex-start;
-			padding-top: 24px;
-		}
-		.row-view6 {
-			flex-shrink: 0;
-			display: flex;
-			align-items: center;
-			gap: 4px;
-		}
-		.row-view7 {
-			display: flex;
-			align-items: center;
-			margin-left: 17px;
-		}
-		.row-view8 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-			gap: 16px;
-		}
-		.row-view9 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-		}
-		.row-view10 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-			padding-top: 12px;
-		}
-		.row-view11 {
-			align-self: stretch;
-			display: flex;
-			align-items: flex-start;
-			padding-top: 12px;
-			gap: 8px;
-		}
-		.row-view12 {
-			display: flex;
-			align-items: center;
-			background: #F4F4F5;
-			border-radius: 12px;
-			border: 1px solid #D4D4D8;
-			padding: 12px 13px;
-			gap: 8px;
-		}
-		.row-view13 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-			gap: 12px;
-		}
-		.row-view14 {
-			align-self: stretch;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-left: 13px;
-		}
-		.row-view15 {
-			align-self: stretch;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-		.row-view16 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-			margin-bottom: 8px;
-		}
-		.row-view17 {
-			align-self: stretch;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-bottom: 8px;
-		}
-		.row-view18 {
-			align-self: stretch;
-			display: flex;
-			align-items: center;
-			margin-bottom: 16px;
-			margin-right: 15px;
-		}
-		.text {
-			color: #18181B;
-			font-size: 14px;
-			font-weight: bold;
-		}
-		.text2 {
-			color: #FFFFFF;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text3 {
-			color: #52525C;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text4 {
-			color: #18181B;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text5 {
-			color: #52525C;
-			font-size: 12px;
-		}
-		.text6 {
-			color: #000000;
-			font-size: 36px;
-			font-weight: bold;
-			text-align: center;
-			width: 762px;
-		}
-		.text7 {
-			color: #18181B;
-			font-size: 12px;
-			font-weight: bold;
-			margin-right: 201px;
-		}
-		.text8 {
-			color: #18181B;
-			font-size: 16px;
-			font-weight: bold;
-		}
-		.text9 {
-			color: #18181B;
-			font-size: 12px;
-			font-weight: bold;
-			margin-right: 2px;
-		}
-		.text10 {
-			color: #000000;
-			font-size: 16px;
-			font-weight: bold;
-		}
-		.text11 {
-			color: #FFFFFF;
-			font-size: 16px;
-			font-weight: bold;
-		}
-		.text12 {
-			color: #3F3F47;
-			font-size: 12px;
-			font-weight: bold;
-			margin-right: 8px;
-		}
-		.text13 {
-			color: #3F3F47;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text14 {
-			color: #27272A;
-			font-size: 12px;
-		}
-		.text15 {
-			color: #27272A;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.text16 {
-			color: #71717B;
-			font-size: 11px;
-			margin-left: 13px;
-		}
-		.text17 {
-			color: #71717B;
-			font-size: 11px;
-		}
-		.text18 {
-			color: #3F3F47;
-			font-size: 12px;
-		}
-		.text19 {
-			color: #18181B;
-			font-size: 12px;
-			font-weight: bold;
-			margin-right: 3px;
-		}
-		.text20 {
-			color: #27272A;
-			font-size: 11px;
-		}
-		.text21 {
-			color: #18181B;
-			font-size: 12px;
-			font-weight: bold;
-			margin-right: 9px;
-		}
-		.text22 {
-			color: #000000;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		.view {
-			overflow: hidden;
-			align-self: stretch;
-			background: #FFFFFF;
-		}
-		.view2 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			padding-left: 14px;
-			padding-right: 14px;
-		}
-		.view3 {
-			width: 762px;
-			box-sizing: border-box;
-			padding-top: 24px;
-			padding-right: 14px;
-			margin-bottom: 1px;
-		}
-		.view4 {
-			width: 762px;
-			box-sizing: border-box;
-			padding-top: 24px;
-		}
-		.view5 {
-			flex-shrink: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			background: #F4F4F5;
-			border-radius: 8px;
-			border: 1px solid #D4D4D8;
-			padding: 3px 18px 3px 7px;
-			margin-right: 4px;
-		}
-		.view6 {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding-top: 24px;
-			margin-bottom: 93px;
-		}
-		.view7 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			margin-bottom: 11px;
-		}
-		.view8 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			padding-top: 4px;
-		}
-		.view9 {
-			align-self: stretch;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			padding-bottom: 9px;
-			margin-bottom: 12px;
-		}
-	</style>
+	<title>Configurar Festa - Let's Party</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-		<div class="contain">
-		<div class="view">
-			<div class="column">
-				<header>
-					<nav>
-						<div class="row-view">
-						<a href="index.html">
-							<img src="img/logo.jpg" class="image">
-						</a>
-						<div class="view2">
-							<span class="text" >
-								Let’s Party
-							</span>
-						</div>
-						<div class="row-view2">
-							<img
-								src="img/config.png" 
-								class="img_config"
-							/>
 
-						</div>
-					</nav>
-				</header>
-				<div class="column2">
-					<div class="column3">
-						<div class="row-view4">
-							<button class="button-row-view"
-								onclick="alert('Pressed!')"}>
-								<img
-									src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/usblxyu6_expires_30_days.png" 
-									class="image4"
-								/>
-								<span class="text3" >
-									1. Local
-								</span>
-							</button>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/eawt8vnf_expires_30_days.png" 
-								class="image5"
-							/>
-							<button class="button2"
-								onclick="alert('Pressed!')"}>
-								<span class="text2" >
-									2. Configurar Festa
-								</span>
-							</button>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/6kkezbb3_expires_30_days.png" 
-								class="image5"
-							/>
-							<button class="button3"
-								onclick="alert('Pressed!')"}>
-								<span class="text4" >
-									3. Resumo
-								</span>
-							</button>
-							<img
-								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/mgewq2jh_expires_30_days.png" 
-								class="image5"
-							/>
-							<button class="button3"
-								onclick="alert('Pressed!')"}>
-								<span class="text4" >
-									4. Confirmação
-								</span>
-							</button>
-						</div>
-						<div class="column4">
-							<div class="row-view5">
-								<div class="row-view6">
-									<img
-										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/dj9827hm_expires_30_days.png" 
-										class="image6"
-									/>
-									<span class="text3" >
-										Trocar de Local
-									</span>
-								</div>
-								<span class="text5" >
-									Local Escolhido: Espaço Jardim da Barra (Barra da Tijuca)
-								</span>
-							</div>
-							<div class="column5">
-								<span class="text6" >
-									CONFIGURAR
-								</span>
-								<div class="view3">
-									<div class="column6">
-										<div class="row-view7">
-											<span class="text7" >
-												Nome do evento
-											</span>
-											<div class="box">
-											</div>
-											<div class="box2">
-											</div>
-										</div>
-										<button class="button4"
-											onclick="alert('Pressed!')"}>
-											<span class="text8" >
-												Espaço Jardim da Barra
-											</span>
-										</button>
-									</div>
-								</div>
-								<div class="view4">
-									<div class="row-view8">
-										<div class="column7">
-											<div class="row-view9">
-												<span class="text4" >
-													Quantidade de Mesas
-												</span>
-												<div class="box3">
-												</div>
-												<span class="text9" >
-													5
-												</span>
-												<span class="text4" >
-													/ 15
-												</span>
-											</div>
-											<div class="row-view10">
-												<div class="view5">
-													<span class="text8" >
-														-
-													</span>
-												</div>
-												<button class="button5"
-													onclick="alert('Pressed!')"}>
-													<span class="text10" >
-														5
-													</span>
-												</button>
-												<button class="button6"
-													onclick="alert('Pressed!')"}>
-													<span class="text11" >
-														+
-													</span>
-												</button>
-											</div>
-										</div>
-										<div class="column7">
-											<div class="row-view9">
-												<span class="text4" >
-													Quantidade de Cadeiras
-												</span>
-												<div class="box3">
-												</div>
-												<span class="text12" >
-													60
-												</span>
-												<span class="text13" >
-													/ 80
-												</span>
-											</div>
-											<div class="row-view11">
-												<button class="button7"
-													onclick="alert('Pressed!')"}>
-													<span class="text4" >
-														-5
-													</span>
-												</button>
-												<button class="button8"
-													onclick="alert('Pressed!')"}>
-													<span class="text4" >
-														60
-													</span>
-												</button>
-												<button class="button9"
-													onclick="alert('Pressed!')"}>
-													<span class="text2" >
-														+5
-													</span>
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="view6">
-									<div class="row-view12">
-										<img
-											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/pkilpmdi_expires_30_days.png" 
-											class="image7"
-										/>
-										<span class="text14" >
-											Configuração de móveis validada com sucesso! Espaço com excelente circulação.
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
+<!-- Cabeçalho -->
+<header>
+	<nav>
+		<div class="organizar_navbar">
+			<a href="index.html">
+				<img src="img/logo.jpg" class="logo" alt="Let's Party">
+			</a>
+			<span class="texto_preto_negrito">Let’s Party</span>
+			<img src="img/config.png" class="img_config" alt="Configurações">
+		</div>
+	</nav>
+</header>
+
+<!-- Conteúdo principal -->
+<main style="display: block; margin-bottom:20px ;padding: 0 95px 81.688px 95px;
+">
+	<!-- Barra de Progresso (Caminho) -->
+	<div class="container_caminho">
+		<div class="caminho_inativo">
+			<span class="texto_caminho_inativo">1. Local</span>
+		</div>
+		<img src="img/seta.png" class="seta_img" alt="Seta">
+		<div class="caminho_ativo">
+			<span class="textos_brancos">2. Configurar Festa</span>
+		</div>
+		<img src="img/seta.png" class="seta_img" alt="Seta">
+		<div class="caminho_inativo">
+			<span class="texto_caminho_inativo">3. Resumo</span>
+		</div>
+		<img src="img/seta.png" class="seta_img" alt="Seta">
+		<div class="caminho_inativo">
+			<span class="texto_caminho_inativo">4. Confirmação</span>
+		</div>
+	</div>
+<!-- Linha acima das colunas de configurar e de resumo -->
+			<div class="aviso_local">
+				<a href="index.html" class="link_trocar_local">
+					<img src="img/setinha.png" width="16px" height="16px" alt="Trocar">
+					<span class="texto_cinza">Trocar de Local</span>
+				</a>
+				<span class="texto_cinza">Local Escolhido: <strong>Espaço Jardim da Barra</strong> (Barra da Tijuca)</span>
+			</div>
+
+	<!-- Layout de 2 Colunas para a Configuração -->
+	<div class="layout_configuracao">
+
+		<!-- Coluna Esquerda: Configurar sua festa -->
+		<section class="configurar">
+			<h2 class="titulo_config"><center>CONFIGURAR</center></h2>
+
+			<!-- Nome do Evento -->
+			<div class="card">
+				<div class="grupo_input">
+					<label class="rotulo_input">Nome do evento</label>
+					<input type="text" class="input_texto_padrao" value="Espaço Jardim da Barra">
+				</div>
+			</div>
+
+			<!-- Grid de Contadores (Mesas e Cadeiras) -->
+			<div class="grid_contadores">
+				<!-- Card Mesas -->
+				<div class="card_contador">
+					<div class="cabecalho_contador">
+						<span class="texto_preto_negrito">Quantidade de Mesas</span>
+						<span class="texto_cinza_escuro">5 / 15</span>
 					</div>
-					<div class="absolute-column">
-						<div class="view7">
-							<span class="text4" >
-								Serviços Adicionais Opcionais:
-							</span>
-						</div>
-						<div class="column8">
-							<div class="row-view13">
-								<div class="column9">
-									<div class="row-view14">
-										<span class="text15" >
-											Mestre Churrasqueiro + Auxiliar
-										</span>
-										<span class="text4" >
-											+ R$ 450
-										</span>
-									</div>
-									<span class="text16" >
-										Preparo completo do churrasco durante 5h de evento.
-									</span>
-								</div>
-								<div class="column10">
-									<div class="row-view14">
-										<span class="text4" >
-											Equipe de Limpeza (Durante e Pós)
-										</span>
-										<span class="text4" >
-											+ R$ 300
-										</span>
-									</div>
-									<span class="text16" >
-										2 profissionais dedicados à higienização contínua do salão e banheiros.
-									</span>
-								</div>
-							</div>
-							<div class="row-view13">
-								<div class="column11">
-									<div class="row-view15">
-										<span class="text15" >
-											Organizador &amp; Cerimonialista de Apoio
-										</span>
-										<span class="text4" >
-											+ R$ 500
-										</span>
-									</div>
-									<span class="text17" >
-										Acompanhamento do arranjo de decoração e recepção dos convidados.
-									</span>
-								</div>
-								<div class="column12">
-									<div class="row-view15">
-										<span class="text15" >
-											Animadores Infantil com Figurino
-										</span>
-										<span class="text4" >
-											+ R$ 380
-										</span>
-									</div>
-									<div class="view8">
-										<span class="text17" >
-											2 animadores para brincadeiras, gincanas e pintura facial (4 horas).
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="absolute-column2">
-						<div class="view9">
-							<span class="text" >
-								Resumo do Orçamento
-							</span>
-						</div>
-						<div class="column13">
-							<div class="column14">
-								<div class="row-view16">
-									<span class="text18" >
-										Aluguel do Espaço:
-									</span>
-									<div class="box3">
-									</div>
-									<span class="text19" >
-										R$
-									</span>
-									<span class="text4" >
-										2500
-									</span>
-								</div>
-								<div class="row-view17">
-									<span class="text17" >
-										Móveis (10 mes / 60 cad):
-									</span>
-									<span class="text20" >
-										Inclusos
-									</span>
-								</div>
-								<div class="row-view18">
-									<span class="text18" >
-										Serviços Extras (  ):
-									</span>
-									<div class="box3">
-									</div>
-									<span class="text21" >
-										R$
-									</span>
-									<span class="text4" >
-										0
-									</span>
-								</div>
-								<div class="box4">
-								</div>
-								<div class="box5">
-								</div>
-							</div>
-							<span class="absolute-text" >
-								Total Estimado:
-							</span>
-							<span class="absolute-text2" >
-								2500
-							</span>
-						</div>
-						<button class="button10"
-							onclick="alert('Pressed!')"}>
-							<span class="text2" >
-								Avançar para Confirmação do Evento →
-							</span>
-						</button>
+					<div class="controles_contador">
+						<button class="btn_contador_inativo">-</button>
+						<span class="valor_contador">5</span>
+						<button class="btn_contador_ativo">+</button>
 					</div>
 				</div>
+
+				<!-- Card Cadeiras -->
+				<div class="card_contador">
+					<div class="cabecalho_contador">
+						<span class="texto_preto_negrito">Quantidade de Cadeiras</span>
+						<span class="texto_cinza_escuro">60 / 80</span>
+					</div>
+					<div class="controles_contador">
+						<button class="btn_contador_ativo">-5</button>
+						<span class="valor_contador">60</span>
+						<button class="btn_contador_ativo">+5</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Mensagem de Sucesso -->
+			<div class="mensagem_sucesso">
+				<img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/6r6skCPVvZ/pkilpmdi_expires_30_days.png" class="icone_sucesso" alt="Sucesso">
+				<span>Configuração de móveis validada com sucesso! Espaço com excelente circulação.</span>
+			</div>
+
+			<h3 class="titulo_secao">Serviços Adicionais Opcionais:</h3>
+
+			<!-- Grid de Serviços -->
+			<div class="grid_servicos">
+				<div class="card card_servico">
+					<div class="cabecalho_servico">
+						<span class="titulo_servico">Mestre Churrasqueiro + Auxiliar</span>
+						<span class="preco_servico">+ R$ 450</span>
+					</div>
+					<p class="descricao_servico">Preparo completo do churrasco durante 5h de evento.</p>
+				</div>
 				
+				<div class="card card_servico">
+					<div class="cabecalho_servico">
+						<span class="titulo_servico">Equipe de Limpeza (Durante e Pós)</span>
+						<span class="preco_servico">+ R$ 300</span>
+					</div>
+					<p class="descricao_servico">2 profissionais dedicados à higienização contínua do salão e banheiros.</p>
+				</div>
+
+				<div class="card card_servico">
+					<div class="cabecalho_servico">
+						<span class="titulo_servico">Organizador & Cerimonialista de Apoio</span>
+						<span class="preco_servico">+ R$ 500</span>
+					</div>
+					<p class="descricao_servico">Acompanhamento do arranjo de decoração e recepção dos convidados.</p>
+				</div>
+
+				<div class="card card_servico">
+					<div class="cabecalho_servico">
+						<span class="titulo_servico">Animadores Infantil com Figurino</span>
+						<span class="preco_servico">+ R$ 380</span>
+					</div>
+					<p class="descricao_servico">2 animadores para brincadeiras, gincanas e pintura facial (4 horas).</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Coluna Direita: Resumo Fixo (Sidebar) -->
+		<aside class="coluna_lateral">
+			<div class="card_resumo">
+				<h3 class="titulo_resumo">Resumo do Orçamento</h3>
+				
+				<div class="linhas_resumo">
+					<div class="linha_resumo">
+						<span class="texto_cinza_escuro">Aluguel do Espaço:</span>
+						<span class="texto_preto_negrito">R$ 2500</span>
+					</div>
+					<div class="linha_resumo">
+						<span class="texto_cinza_escuro">Móveis (10 mes / 60 cad):</span>
+						<span class="badge_incluso">Inclusos</span>
+					</div>
+					<div class="linha_resumo">
+						<span class="texto_cinza_escuro">Serviços Extras ( ):</span>
+						<span class="texto_preto_negrito">R$ 0</span>
+					</div>
+				</div>
+
+				<hr class="divisor_resumo">
+
+				<div class="total_resumo">
+					<span>Total Estimado:</span>
+					<span class="valor_total">R$ 2500</span>
+				</div>
+
+				<button class="btn_avancar">
+					<a href="Resumo.html" style="text-decoration: none; color: white;">Avançar para Confirmação do Evento →</a>
+				</button>
+			</div>
+		</aside>
+
+	</div>
+</main>
+
 <!-- Rodapé -->
 <footer>
 	<span class="text-footer"> © 2026 Let’s Party. Todos os direitos reservados. </span>
 </footer>
-			</div>
-		</div>
-	</div>
+
 </body>
 </html>
