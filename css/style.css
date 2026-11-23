@@ -119,6 +119,17 @@
 		}
 
 		/* CARDS DOS EVENTOS */
+		/* Aviso quando não há eventos */
+		#aviso{
+			display: none;
+			justify-content: center;
+			background-color: whitesmoke;
+			opacity: 30%;
+			border: 1px solid black;
+			border-radius: 10px;
+			width: 100%;
+			font-size: 14px;
+		}
 		.container_eventos {
 			display: flex;
 			flex-wrap: wrap;

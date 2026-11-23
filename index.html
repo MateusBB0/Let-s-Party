@@ -41,17 +41,22 @@
 		</div>
 	</div>
 	<br><br>
+	<!-- Campo de pesquisa -->
 		<div class="container_busca">
 			<div class="box_busca">
 					<h3 class="texto_cinza" >Buscar por Bairro ou Nome: </h3>
-					<input type="text" placeholder="Ex: Tijuca, Barra, Botafogo..." class="input">
+					<input type="text" id="pesquisa" placeholder="Ex: Tijuca, Barra, Botafogo..." class="input" >
 			</div>
 		</div>
-							
+				
 		<div class="container_eventos">
+			<!-- Quando não tiver nenhum resultado da pesquisa -->
+			<div id="aviso">
+				<h1>Nenhum evento encontrado</h1>
+			</div>
 
 		<!-- Card 1 -->
-		<div class="card">
+		<div class="card local">
 					<img src="img/evento1.jpeg" class="img_evento">
 				<div class="card_conteudo">
 					<div class="titulo_card">
@@ -97,9 +102,9 @@
 		</div>
 		
 		<!-- Card 2 -->
-		<div class="card">
+		<div class="card local">
 				<img src="img/evento2.jpeg" class="img_evento">
-				<div class="card_conteudo">
+				<div class="card_conteudo ">
 					<div class="titulo_card">
 						<span class="titulo" >Salão Real Tijuca </span>
 						<span class="texto_preto_negrito"> R$ 1.400 </span>
@@ -139,7 +144,7 @@
 		</div>
 
 		<!-- Card 3 -->
-		<div class="card">
+		<div class="card local">
 				<img src="img/evento3.jpeg" class="img_evento">
 				<div class="card_conteudo">
 					<div class="titulo_card">
@@ -189,5 +194,7 @@
 <footer>
 	<span class="text-footer"> © 2026 Let’s Party. Todos os direitos reservados. </span>
 </footer>
+
+	<script src="style.js"></script>
 </body>
 </html> 
