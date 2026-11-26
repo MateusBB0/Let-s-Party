@@ -18,10 +18,10 @@ for (let texto = 0; texto < cards.length; texto++) {
 		
 	}
 }
-    if(!tem_card){
-        aviso.style.display = "flex";
-	}else{
+    if(tem_card){
         aviso.style.display = "none";
+	}else{
+        aviso.style.display = "flex";
 
     }
 }
