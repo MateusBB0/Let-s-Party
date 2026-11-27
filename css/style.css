@@ -1,14 +1,16 @@
+/* Há partes com personalizações meio diferentes porque usei em algumas partes o Dev Mode do Figma para pegar o CSS */
+
 /* BODY E MAIN */
 		body {
 			font-family: system-ui;
 		}
 		#main_principal{
-					align-self: stretch;
-					align-items: flex-start;
-					margin-bottom: 201px;
-					margin-left: 111px;
-					margin-right: 111px;
-					position: relative;
+			align-self: stretch;
+			align-items: flex-start;
+			margin-bottom: 201px;
+			margin-left: 111px;
+			margin-right: 111px; 
+			position: relative;
 		}
 
 		/* HEADER */
@@ -287,7 +289,7 @@ footer{
 }
 .coluna_lateral {
     width: 380px;
-    position: sticky; /* Faz o resumo acompanhar a tela */
+   /* position: sticky; */ /* Faz o resumo acompanhar a tela */
     top: 24px; 
 }
 

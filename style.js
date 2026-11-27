@@ -5,9 +5,10 @@ let cards = document.querySelectorAll(".local");
 let aviso = document.getElementById("aviso");
 
 function filtroPesquisa() {
-    let termo = pesquisar.value.toLowerCase();
-    let tem_card = false;
+    let termo = pesquisar.value.toLowerCase(); // pegar o termo de deixá-lo em minúsculo
+    let tem_card = false; // Verificação para aparecer os cards ou não
 
+    // loop em todos os cards
     for (let i = 0; i < cards.length; i++) {
         let texto = cards[i].textContent.toLowerCase();
 
@@ -18,7 +19,7 @@ function filtroPesquisa() {
             cards[i].style.display = "none";
         }
     }
-
+    // Quando o aviso aparece ou não
     if (aviso) {
         if (tem_card) {
             aviso.style.display = "none";
@@ -27,10 +28,11 @@ function filtroPesquisa() {
         }
     }
 }
-
+// Fazer a função ser executada
 if (pesquisar) {
     pesquisar.addEventListener("input", filtroPesquisa);
 }
+/* ----------------- */
 
 //Parte do evento.html
 const chaveFesta = "letsPartyConfiguracao";
